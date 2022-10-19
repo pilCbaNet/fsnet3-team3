@@ -32,5 +32,31 @@
       "name": "Joaquín",
       "perfil": "Desarollador Web"
     }
+  ],
+  "movimientos":[
+    {
+      "id": 1,
+      "operacion": "Depósito",
+      "monto": 1500,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 2,
+      "operacion": "Depósito",
+      "monto": 1500,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 3,
+      "operacion": "Retiro",
+      "monto": 750,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 4,
+      "operacion": "Retiro",
+      "monto": 1000,
+      "numeroDeCuenta": 1
+    }
   ]
 }
