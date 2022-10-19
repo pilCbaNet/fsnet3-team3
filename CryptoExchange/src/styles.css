@@ -1,0 +1,21 @@
+/* Puse esto xq así está en clases, pero es totalmente editable */
+header.fondo {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  padding-right: 2rem;
+  text-align: right;
+  color: #fff;
+  background-image: url("assets/img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  }
+  h1.mensaje-bienvenida {
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  }
+  .background{
+    background-color: #06283D;
+
+  }

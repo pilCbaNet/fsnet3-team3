@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "team": [
+    {
+      "id": 2,
+      "name": "José Luis",
+      "perfil": "Desarollador Web"
+    },
+    {
+      "id": 3,
+      "name": "Diana",
+      "perfil": "Desarollador Web"
+    },
+    {
+      "id": 1,
+      "name": "Joaquín",
+      "perfil": "Desarollador Web"
+    }
+  ],
+  "movimientos":[
+    {
+      "id": 1,
+      "operacion": "Depósito",
+      "monto": 1500,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 2,
+      "operacion": "Depósito",
+      "monto": 1500,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 3,
+      "operacion": "Retiro",
+      "monto": 750,
+      "numeroDeCuenta": 1
+    },
+    {
+      "id": 4,
+      "operacion": "Retiro",
+      "monto": 1000,
+      "numeroDeCuenta": 1
+    }
+  ]
+}
