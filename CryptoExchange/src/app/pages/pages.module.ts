@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
 import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     QuienesSomosComponent,
