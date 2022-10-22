@@ -1,19 +1,27 @@
 <div class="mt-3 mb-3 container rounded overflow-hidden shadow">
     <div class="row">
-        <div class="loginPage col-7 d-none d-md-block">
+        <div class="loginPage col-7 d-none d-lg-block">
 
         </div>
 
         <div class="loginPageforms pt-5 pb-5 col-12 col-md-5 ">
             <h3 class="mt-5 text-center">Iniciar Sesión</h3>
-            <form>
+            <form [formGroup]="form" (ngSubmit)="login()">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="bi bi-person-circle"></i>
                         </span>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control ng-dirty ng-invalid" id="email" formControlName="email">
+                    </div>
+                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+                        <div *ngIf="email?.errors?.['required']">
+                            Debe ingresar un email
+                        </div>
+                        <div *ngIf="email?.errors?.['email']">
+                            Email no valido
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
@@ -22,18 +30,21 @@
                         <span class="input-group-text" id="basic-addon1">
                             <i class="bi bi-key-fill"></i>
                         </span>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" class="form-control" id="password" formControlName="password">
                     </div>
                 </div>
                 <div class="d-grid my-4">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+                        Iniciar Sesión
+                    </button>
                 </div>                
                 <div class="my-3">
-                    <span>No tienes cuenta? <a routerLink="/register">Regístrate</a></span>
+                    <span>No tienes cuenta? <a routerLink="/signup">Regístrate</a></span>
                 </div>
             </form>
             
         </div>
+        
     </div>
 
 </div>

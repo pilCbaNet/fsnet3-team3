@@ -1,0 +1,74 @@
+<div class="container mt-5 mb-5 rounded-4 overflow-hidden shadow bg-light bg-opacity-10">
+    <div class="row">
+        <div class="p-3 col-12 col-md-6 ">
+            <div>
+                <div class="card-header bg-white bg-light mb-3">
+                    <h4 class="text-primary text-center mb-5 mt-3"><i class="bi bi-person-workspace"></i> Registro de Usuario</h4>
+                </div>
+                <div>
+                    <form [formGroup]="form" action="#">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control form-control-sm" id="name" formControlName="name"
+                                [ngClass]="name?.invalid && (name?.dirty || name?.touched) ? 'is-invalid' : ''"
+                            >
+                            <div class="invalid-feedback">Debe colocar un Nombre</div>
+                            <!-- [ngClass]="name?.errors?.['required'] ? 'is-invalid' : ''" -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">Apellido</label>
+                            <input type="text" class="form-control form-control-sm" id="lastname" formControlName="lastname"
+                                [ngClass]="lastname?.invalid && (lastname?.dirty || lastname?.touched) ? 'is-invalid' : ''"
+                            >
+                            <div class="invalid-feedback">Debe colocar un Apellido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control form-control-sm" id="birthdate" formControlName="birthdate"
+                                [ngClass]="birthdate?.invalid && (birthdate?.dirty || birthdate?.touched) ? 'is-invalid' : ''"
+                            >
+                            <div class="invalid-feedback">Debe colocar una fecha de nacimiento</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-sm" id="email" formControlName="email"
+                                [ngClass]="email?.invalid && (email?.dirty || email?.touched) ? 'is-invalid' : ''"
+                            >
+                                <div *ngIf="email?.errors?.['required']" class="invalid-feedback">
+                                    Debe colocar un Email
+                                </div>
+                                <div *ngIf="email?.errors?.['email']" class="invalid-feedback">
+                                    El formato del Email es incorrecto
+                                </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control form-control-sm" id="password" formControlName="password"
+                                [ngClass]="password?.invalid && (password?.dirty || password?.touched) ? 'is-invalid' : ''"
+                            >
+                                <div *ngIf="password?.errors?.['required']" class="invalid-feedback">
+                                    Debe especificar una Contraseña
+                                </div>
+                                <div *ngIf="password?.errors?.['minlength'] " class="invalid-feedback">
+                                    La Contraseña debe tener minímo 8 caracteres
+                                </div>
+                        </div>
+                        <div class="d-grid my-4">
+                            <button type="submit" class="btn btn-primary" [disabled]="!form.valid"
+                                (click)="signUp()"
+                            >
+                                Registrarse
+                            </button>
+                        </div>
+                        <div class="my-3">
+                            <span>Ya tienes una cuenta? <a routerLink="/login">Iniciar Sesión</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="signupPage bg-primary bg-opacity-25 col-6 d-none d-md-block ">
+
+        </div>
+    </div>
+</div>

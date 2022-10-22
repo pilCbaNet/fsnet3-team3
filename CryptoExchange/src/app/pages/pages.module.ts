@@ -4,18 +4,21 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
   declarations: [
     QuienesSomosComponent,
     MovimientosComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports: [
     QuienesSomosComponent,

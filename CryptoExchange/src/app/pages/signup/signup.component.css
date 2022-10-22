@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.signupPage {
+  background-image: url("../../../assets/img/signup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

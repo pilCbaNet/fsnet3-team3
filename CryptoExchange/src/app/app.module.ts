@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { LayoutModule } from './layout/layout.module';
 
-import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
