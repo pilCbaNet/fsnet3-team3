@@ -18,45 +18,98 @@
   },
   "team": [
     {
+      "id": 1,
+      "name": "Daniela Robledo Akerman",
+      "perfil": "Desarolladora Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
+    },
+    {
       "id": 2,
-      "name": "José Luis",
-      "perfil": "Desarollador Web"
+      "name": "David Lazarte",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
     },
     {
       "id": 3,
-      "name": "Diana",
-      "perfil": "Desarollador Web"
+      "name": "Francisco Secrestat",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
     },
     {
-      "id": 1,
-      "name": "Joaquín",
-      "perfil": "Desarollador Web"
+      "id": 4,
+      "name": "Juan Marcos Lemos Smit",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
+    },
+    {
+      "id": 5,
+      "name": "Luca Bessone",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
+    },
+    {
+      "id": 6,
+      "name": "Leonardo David Sanchez",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
+    },
+    {
+      "id": 7,
+      "name": "Mariano Fabricio Baez",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
+    },
+    {
+      "id": 8,
+      "name": "Mauro Catania",
+      "perfil": "Desarollador Web, Scrum Master",
+      "imagen": "../../../assets/img/foto-quienes-somos.png"
     }
   ],
   "movimientos":[
     {
       "id": 1,
       "operacion": "Depósito",
-      "monto": 1500,
-      "numeroDeCuenta": 1
+      "monto": 1500.00,
+      "numeroDeCuenta": 1,
+      "saldo": 4500.00,
+      "detalle": "/movimientos/4",
+      "moneda": "ARS",
+      "comprobante": "004",
+      "concepto": "Varios"
     },
     {
       "id": 2,
       "operacion": "Depósito",
-      "monto": 1500,
-      "numeroDeCuenta": 1
+      "monto": 17.00,
+      "numeroDeCuenta": 2,
+      "saldo": 30.00,
+      "detalle": "/movimientos/3",
+      "moneda": "BTC",
+      "comprobante": "003",
+      "concepto": "Varios"
     },
     {
       "id": 3,
       "operacion": "Retiro",
-      "monto": 750,
-      "numeroDeCuenta": 1
+      "monto": 750.00,
+      "numeroDeCuenta": 1,
+      "saldo": 3000.00,
+      "detalle": "/movimientos/2",
+      "moneda": "ARS",
+      "comprobante": "002",
+      "concepto": "Varios"
     },
     {
       "id": 4,
       "operacion": "Retiro",
-      "monto": 1000,
-      "numeroDeCuenta": 1
+      "monto": 13.00,
+      "numeroDeCuenta": 2,
+      "saldo": 10.00,
+      "detalle": "/movimientos/1",
+      "moneda": "BTC",
+      "comprobante": "001",
+      "concepto": "Varios"
     }
   ]
 }

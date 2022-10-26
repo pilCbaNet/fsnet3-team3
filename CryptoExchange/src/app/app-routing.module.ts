@@ -5,16 +5,18 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { DetallesMovimientosComponent } from './pages/detalles-movimientos/detalles-movimientos.component';
 
 
 
 const routes: Routes = [
   { path: 'home', component: LandingComponent },
   { path: 'quienes-somos', component: QuienesSomosComponent },
-  { path: 'login', component: LoginComponent},
-  { path: 'signup', component: SignupComponent},
-  { path: 'movimientos', component: MovimientosComponent},
-  { path: '', redirectTo:'/home', pathMatch:'full' }
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'movimientos', component: MovimientosComponent },
+  { path: 'movimientos/:movimiento', component: DetallesMovimientosComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

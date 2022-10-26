@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { DetallesMovimientosComponent } from './detalles-movimientos/detalles-movimientos.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SignupComponent } from './signup/signup.component';
     QuienesSomosComponent,
     MovimientosComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DetallesMovimientosComponent
   ],
   imports: [
     CommonModule,
