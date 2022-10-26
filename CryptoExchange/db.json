@@ -21,49 +21,64 @@
       "id": 1,
       "name": "Daniela Robledo Akerman",
       "perfil": "Desarolladora Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/danielaAkerman"
     },
     {
       "id": 2,
       "name": "David Lazarte",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/dilazarte"
     },
     {
-      "id": 3,
-      "name": "Francisco Secrestat",
+      "id":3,
+      "name": "Diego Arias",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen":"../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/DiegoArias95"
     },
     {
       "id": 4,
-      "name": "Juan Marcos Lemos Smit",
+      "name": "Francisco Secrestat",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/FranciscoSecrestat"
     },
     {
       "id": 5,
-      "name": "Luca Bessone",
+      "name": "Juan Marcos Lemos Smit",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/juanmarcosls"
     },
     {
       "id": 6,
-      "name": "Leonardo David Sanchez",
+      "name": "Luca Bessone",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/LucaBessone"
     },
     {
       "id": 7,
-      "name": "Mariano Fabricio Baez",
+      "name": "Leonardo David Sanchez",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/leonardodavidcba"
     },
     {
       "id": 8,
+      "name": "Mariano Fabricio Baez",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/Marianofbaez"
+    },
+    {
+      "id": 9,
       "name": "Mauro Catania",
       "perfil": "Desarollador Web, Scrum Master",
-      "imagen": "../../../assets/img/foto-quienes-somos.png"
+      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "github":"https://github.com/maurocatania"
     }
   ],
   "movimientos":[
