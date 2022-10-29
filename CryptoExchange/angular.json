@@ -25,10 +25,20 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/assets/vendor/aos/aos.css",
+              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
+              "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
+              "src/assets/vendor/boxicons/css/boxicons.min.css",
+              "src/assets/vendor/swiper/swiper-bundle.min.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/vendor/purecounter/purecounter_vanilla.js",
+              "src/assets/vendor/aos/aos.js",
+              "src/assets/vendor/swiper/swiper-bundle.min.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
