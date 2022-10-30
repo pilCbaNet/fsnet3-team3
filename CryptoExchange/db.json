@@ -21,7 +21,7 @@
       "id": 1,
       "name": "Daniela Robledo Akerman",
       "perfil": "Desarolladora Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-1.png",
       "github":"https://github.com/danielaAkerman"
     },
     {
@@ -70,15 +70,22 @@
       "id": 8,
       "name": "Mariano Fabricio Baez",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos-9.jpg",
+      "imagen": "../../../assets/img/foto-quienes-somos-8.jpg",
       "github":"https://github.com/Marianofbaez"
     },
     {
       "id": 9,
       "name": "Mauro Catania",
       "perfil": "Desarollador Web, Scrum Master",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-9.jpg",
       "github":"https://github.com/maurocatania"
+    },
+    {
+      "id": 10,
+      "name": "Brian Ochoa",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos-10.jpg",
+      "github":"https://github.com/brianochoa"
     }
   ],
   "movimientos":[
