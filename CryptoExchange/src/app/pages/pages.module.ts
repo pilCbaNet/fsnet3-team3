@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { DetallesMovimientosComponent } from './detalles-movimientos/detalles-movimientos.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DetallesMovimientosComponent } from './detalles-movimientos/detalles-mo
     MovimientosComponent,
     LoginComponent,
     SignupComponent,
-    DetallesMovimientosComponent
+    DetallesMovimientosComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
