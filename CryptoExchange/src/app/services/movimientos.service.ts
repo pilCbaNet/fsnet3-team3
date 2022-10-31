@@ -14,5 +14,10 @@ export class MovimientosService {
   return this.http.get('http://localhost:3000/movimientos')
 }
 
+obtenerSaldo():Observable<any>
+{
+  return this.http.get('http://localhost:3000/saldos')
+}
+
  
 }
