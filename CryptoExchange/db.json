@@ -133,5 +133,17 @@
       "comprobante": "001",
       "concepto": "Varios"
     }
+  ],
+  "saldos":[
+{
+  "id": 1,
+  "cuenta": "ARS",
+  "saldo": "4500.00"
+},
+{
+  "id": 2,
+  "cuenta": "BTC",
+  "saldo": "30.00"
+}
   ]
 }
