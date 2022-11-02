@@ -1,6 +1,9 @@
 .loginPage{
     background-image: url('../../../assets/img/login.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
     background-position: center;
+}
+.loginPageforms{
+    height: 510px;
 }

@@ -2,6 +2,9 @@
 .signupPage {
   background-image: url("../../../assets/img/signup.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+}
+.signUpForm{
+  height: 750px;
 }

@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { DetallesMovimientosComponent } from './pages/detalles-movimientos/detalles-movimientos.component';
+import { RetiroDineroComponent } from './pages/retiro-dinero/retiro-dinero.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'movimientos', component: MovimientosComponent },
+  { path: 'retiro', component: RetiroDineroComponent },
   { path: 'movimientos/:movimiento', component: DetallesMovimientosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
