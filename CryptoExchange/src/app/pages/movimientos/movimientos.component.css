@@ -1,0 +1,32 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+    border-radius: 7px;
+    border-collapse: collapse;  
+  }
+  th{
+    background-color: #06283d;
+    text-align: left;
+    color: whitesmoke;
+  }
+  table{
+    width: 100%;   
+  }
+  th, td {
+    padding: 10px;
+  }
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+  td{
+    background-color: whitesmoke;
+  }
+  h1{
+    text-align: center;
+
+  }
+
+
+
+  
