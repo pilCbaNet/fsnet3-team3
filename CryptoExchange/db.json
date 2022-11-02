@@ -21,14 +21,14 @@
       "id": 1,
       "name": "Daniela Robledo Akerman",
       "perfil": "Desarolladora Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-1.png",
       "github":"https://github.com/danielaAkerman"
     },
     {
       "id": 2,
       "name": "David Lazarte",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-2.png",
       "github":"https://github.com/dilazarte"
     },
     {
@@ -42,43 +42,50 @@
       "id": 4,
       "name": "Francisco Secrestat",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-4.png",
       "github":"https://github.com/FranciscoSecrestat"
     },
     {
       "id": 5,
       "name": "Juan Marcos Lemos Smit",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-5.png",
       "github":"https://github.com/juanmarcosls"
     },
     {
       "id": 6,
       "name": "Luca Bessone",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-6.png",
       "github":"https://github.com/LucaBessone"
     },
     {
       "id": 7,
       "name": "Leonardo David Sanchez",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-7.png",
       "github":"https://github.com/leonardodavidcba"
     },
     {
       "id": 8,
       "name": "Mariano Fabricio Baez",
       "perfil": "Desarollador Web",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-8.jpg",
       "github":"https://github.com/Marianofbaez"
     },
     {
       "id": 9,
       "name": "Mauro Catania",
       "perfil": "Desarollador Web, Scrum Master",
-      "imagen": "../../../assets/img/foto-quienes-somos.png",
+      "imagen": "../../../assets/img/foto-quienes-somos-9.jpg",
       "github":"https://github.com/maurocatania"
+    },
+    {
+      "id": 10,
+      "name": "Brian Ochoa",
+      "perfil": "Desarollador Web",
+      "imagen": "../../../assets/img/foto-quienes-somos-10.jpg",
+      "github":"https://github.com/brianochoa"
     }
   ],
   "movimientos":[
@@ -126,5 +133,17 @@
       "comprobante": "001",
       "concepto": "Varios"
     }
+  ],
+  "saldos":[
+{
+  "id": 1,
+  "cuenta": "ARS",
+  "saldo": "4500.00"
+},
+{
+  "id": 2,
+  "cuenta": "BTC",
+  "saldo": "30.00"
+}
   ]
 }
