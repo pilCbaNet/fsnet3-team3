@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovimientosService } from 'src/app/services/movimientos.service';
-import { QuienesSomosService } from 'src/app/services/quienes-somos.service';
+
 
 @Component({
   selector: 'app-movimientos',
@@ -8,15 +8,15 @@ import { QuienesSomosService } from 'src/app/services/quienes-somos.service';
   styleUrls: ['./movimientos.component.css']
 })
 export class MovimientosComponent implements OnInit {
-  hoy= new Date();
-  movimientos:any;
+  hoy = new Date();
+  movimientos: any;
+
   constructor(private cuenta: MovimientosService) { }
 
   ngOnInit(): void {
-    this.cuenta.obtenerUltimosMovimientos().subscribe(data =>{
+    this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
       console.log(data);
-      this.movimientos=data;
+      this.movimientos = data;
     })
   }
-
 }

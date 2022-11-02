@@ -1,0 +1,21 @@
+.card-text{
+  text-align: center;
+}
+.bordery{
+  border-radius: 20px;
+  background-color: #1363df;
+}
+.white-text{
+  color: white;
+}
+.box{ 
+  background: #dff6ff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+

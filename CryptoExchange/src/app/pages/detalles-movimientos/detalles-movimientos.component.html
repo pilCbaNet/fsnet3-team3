@@ -1,0 +1,147 @@
+<div [ngSwitch]="movimiento">
+  <h1 *ngSwitchCase="1">Detalles del movimiento</h1>
+  <table *ngSwitchCase="1" class="container">
+    <thead>
+      <th colspan="2">
+        Caja de ahorro en {{ movimientos[3].moneda }} ({{
+          movimientos[3].numeroDeCuenta
+        }})
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Monto</strong></td>
+        <td>
+          {{ movimientos[3].monto | currency }} {{ movimientos[3].moneda }}
+        </td>
+      </tr>
+      <tr>
+        <td><strong>N° de comprobante</strong></td>
+        <td>{{ movimientos[3].comprobante }}</td>
+      </tr>
+      <tr>
+        <td><strong>Concepto</strong></td>
+        <td>{{ movimientos[3].concepto }}</td>
+      </tr>
+      <tr>
+        <td><strong>Descripción</strong></td>
+        <td>{{ movimientos[3].operacion }}</td>
+      </tr>
+      <tr>
+        <td><strong>Fecha</strong></td>
+        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div [ngSwitch]="movimiento">
+  <h1 *ngSwitchCase="2">Detalles del movimiento</h1>
+  <table *ngSwitchCase="2" class="container">
+    <thead>
+      <th colspan="2">
+        Caja de ahorro en {{ movimientos[2].moneda }} ({{
+          movimientos[2].numeroDeCuenta
+        }})
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Monto</strong></td>
+        <td>
+          {{ movimientos[2].monto | currency }} {{ movimientos[2].moneda }}
+        </td>
+      </tr>
+      <tr>
+        <td><strong>N° de comprobante</strong></td>
+        <td>{{ movimientos[2].comprobante }}</td>
+      </tr>
+      <tr>
+        <td><strong>Concepto</strong></td>
+        <td>{{ movimientos[2].concepto }}</td>
+      </tr>
+      <tr>
+        <td><strong>Descripción</strong></td>
+        <td>{{ movimientos[2].operacion }}</td>
+      </tr>
+      <tr>
+        <td><strong>Fecha</strong></td>
+        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div [ngSwitch]="movimiento">
+  <h1 *ngSwitchCase="3">Detalles del movimiento</h1>
+  <table *ngSwitchCase="3" class="container">
+    <thead>
+      <th colspan="2">
+        Caja de ahorro en {{ movimientos[1].moneda }} ({{
+          movimientos[1].numeroDeCuenta
+        }})
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Monto</strong></td>
+        <td>
+          {{ movimientos[1].monto | currency }} {{ movimientos[1].moneda }}
+        </td>
+      </tr>
+      <tr>
+        <td><strong>N° de comprobante</strong></td>
+        <td>{{ movimientos[1].comprobante }}</td>
+      </tr>
+      <tr>
+        <td><strong>Concepto</strong></td>
+        <td>{{ movimientos[1].concepto }}</td>
+      </tr>
+      <tr>
+        <td><strong>Descripción</strong></td>
+        <td>{{ movimientos[1].operacion }}</td>
+      </tr>
+      <tr>
+        <td><strong>Fecha</strong></td>
+        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div [ngSwitch]="movimiento">
+  <h1 *ngSwitchCase="4">Detalles del movimiento</h1>
+  <table *ngSwitchCase="4" class="container">
+    <thead>
+      <th colspan="2">
+        Caja de ahorro en {{ movimientos[0].moneda }} ({{
+          movimientos[0].numeroDeCuenta
+        }})
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Monto</strong></td>
+        <td>
+          {{ movimientos[0].monto | currency }} {{ movimientos[0].moneda }}
+        </td>
+      </tr>
+      <tr>
+        <td><strong>N° de comprobante</strong></td>
+        <td>{{ movimientos[0].comprobante }}</td>
+      </tr>
+      <tr>
+        <td><strong>Concepto</strong></td>
+        <td>{{ movimientos[0].concepto }}</td>
+      </tr>
+      <tr>
+        <td><strong>Descripción</strong></td>
+        <td>{{ movimientos[0].operacion }}</td>
+      </tr>
+      <tr>
+        <td><strong>Fecha</strong></td>
+        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<a href="/movimientos" routerLink="/movimientos" class="btn btn-info ">Volver</a>
