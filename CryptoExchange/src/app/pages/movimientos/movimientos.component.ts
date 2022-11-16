@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovimientosService } from 'src/app/services/movimientos.service';
+import { ActivatedRoute, Params} from '@angular/router';
+import { HttpParams } from '@angular/common/http';
 
 
 @Component({
@@ -9,14 +11,27 @@ import { MovimientosService } from 'src/app/services/movimientos.service';
 })
 export class MovimientosComponent implements OnInit {
   hoy = new Date();
-  movimientos: any;
-
-  constructor(private cuenta: MovimientosService) { }
+  movimientosEnARS: any;
+  movimientosEnBTC:any;
+  tipoDeMoneda!:any;
+  constructor(private cuenta: MovimientosService, private ruta:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
+    this.cuenta.obtenerUltimosMovimientosEnARS().subscribe(data => {
       console.log(data);
-      this.movimientos = data;
+      this.movimientosEnARS = data;
     })
+
+    this.cuenta.obtenerUltimosMovimientosEnBTC().subscribe(data => {
+      console.log(data);
+      this.movimientosEnBTC = data;
+    })
+
+    this.ruta.params.subscribe((params:Params) =>{
+      console.log(params['moneda'])
+      this.tipoDeMoneda = params['moneda'];
+    })
+
+ 
   }
 }

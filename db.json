@@ -88,47 +88,27 @@
       "github":"https://github.com/brianochoa"
     }
   ],
-  "movimientos":[
-    {
-      "id": 1,
-      "operacion": "Depósito",
-      "monto": 1500.00,
-      "numeroDeCuenta": 1,
-      "saldo": 4500.00,
-      "detalle": "/movimientos/4",
-      "moneda": "ARS",
-      "comprobante": "004",
-      "concepto": "Varios"
-    },
+  "movimientosEnBTC":[
+
     {
       "id": 2,
       "operacion": "Depósito",
       "monto": 17.00,
       "numeroDeCuenta": 2,
-      "saldo": 30.00,
-      "detalle": "/movimientos/3",
+      "saldo": 27.00,
+      "detalle": "/detalles/3",
       "moneda": "BTC",
       "comprobante": "003",
       "concepto": "Varios"
     },
-    {
-      "id": 3,
-      "operacion": "Retiro",
-      "monto": 750.00,
-      "numeroDeCuenta": 1,
-      "saldo": 3000.00,
-      "detalle": "/movimientos/2",
-      "moneda": "ARS",
-      "comprobante": "002",
-      "concepto": "Varios"
-    },
+
     {
       "id": 4,
       "operacion": "Retiro",
       "monto": 13.00,
       "numeroDeCuenta": 2,
       "saldo": 10.00,
-      "detalle": "/movimientos/1",
+      "detalle": "/detalles/1",
       "moneda": "BTC",
       "comprobante": "001",
       "concepto": "Varios"
@@ -143,7 +123,32 @@
 {
   "id": 2,
   "cuenta": "BTC",
-  "saldo": "30.00"
+  "saldo": "27.00"
 }
+  ],
+  "movimientosEnARS":[
+    {
+      "id": 1,
+      "operacion": "Depósito",
+      "monto": 1500.00,
+      "numeroDeCuenta": 1,
+      "saldo": 4500.00,
+      "detalle": "/detalles/4",
+      "moneda": "ARS",
+      "comprobante": "004",
+      "concepto": "Varios"
+    },
+    {
+      "id": 2,
+      "operacion": "Retiro",
+      "monto": 750.00,
+      "numeroDeCuenta": 1,
+      "saldo": 3000.00,
+      "detalle": "/detalles/2",
+      "moneda": "ARS",
+      "comprobante": "002",
+      "concepto": "Varios"
+    }
+
   ]
 }

@@ -8,21 +8,27 @@ import { MovimientosService } from 'src/app/services/movimientos.service';
   styleUrls: ['./detalles-movimientos.component.css']
 })
 export class DetallesMovimientosComponent implements OnInit {
-  movimiento!: { numeroDeMovimiento:any };
-  movimientos:any;
+  movimiento!:any;
+  movimientosEnARS:any;
+  movimientosEnBTC:any;
   hoy = new Date();
 
   constructor(private rutaActiva: ActivatedRoute, private cuenta: MovimientosService ) { }
 
   ngOnInit(): void {
     this.rutaActiva.params.subscribe(
-      (params: Params) => {
+      params=> {
         this.movimiento = params['movimiento'];
       }
     );
-    this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
+    this.cuenta.obtenerUltimosMovimientosEnARS().subscribe(data => {
       console.log(data);
-      this.movimientos = data;
+      this.movimientosEnARS = data;
+    })
+
+    this.cuenta.obtenerUltimosMovimientosEnBTC().subscribe(data => {
+      console.log(data);
+      this.movimientosEnBTC = data;
     })
 
 }

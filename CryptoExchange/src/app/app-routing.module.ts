@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'movimientos', component: MovimientosComponent },
-  { path: 'movimientos/:movimiento', component: DetallesMovimientosComponent },
+  { path: 'movimientos/:moneda', component: MovimientosComponent },
+  { path: 'detalles/:movimiento', component: DetallesMovimientosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
