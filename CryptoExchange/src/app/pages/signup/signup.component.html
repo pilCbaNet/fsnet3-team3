@@ -3,7 +3,7 @@
         <div class="p-3 col-12 col-md-6 signUpForm d-flex flex-column justify-content-center">
             <div>
                 <div class="card-header bg-white bg-light mb-3">
-                    <h4 class="text-primary text-center mb-5 mt-3"><i class="bi bi-person-workspace"></i> Registro de Usuario</h4>
+                    <h4 class="text-primary text-center mb-5"><i class="bi bi-person-workspace"></i> Registro de Usuario</h4>
                 </div>
                 <div>
                     <form [formGroup]="form" action="#">
@@ -24,10 +24,16 @@
                         </div>
                         <div class="mb-3">
                             <label for="birthdate" class="form-label">Fecha de nacimiento</label>
-                            <input type="date" class="form-control form-control-sm" id="birthdate" formControlName="birthdate"
+                            <input type="date" class="form-control form-control-sm" id="birthdate" formControlName="birthdate" [max]="maxDate"
                                 [ngClass]="birthdate?.invalid && (birthdate?.dirty || birthdate?.touched) ? 'is-invalid' : ''"
+                                
                             >
-                            <div class="invalid-feedback">Debe colocar una fecha de nacimiento</div>
+                            <div *ngIf="birthdate?.errors?.['required'] " class="invalid-feedback">
+                                Debe colocar una fecha de nacimiento
+                            </div>
+                            <div *ngIf="birthdate?.errors?.['validate'] " class="invalid-feedback">
+                                Fecha de nacimiento invalida!
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -51,6 +57,22 @@
                                 </div>
                                 <div *ngIf="password?.errors?.['minlength'] " class="invalid-feedback">
                                     La Contraseña debe tener minímo 8 caracteres
+                                </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control form-control-sm" id="password2" formControlName="password2"
+                                [ngClass]="password2?.invalid && (password2?.dirty || password2?.touched) ? 'is-invalid' : ''"
+                            >
+                                <div *ngIf="password2?.errors?.['required']" class="invalid-feedback">
+                                    Debe confirmar la Contraseña
+                                </div>
+                                <div *ngIf="password2?.errors?.['minlength'] " class="invalid-feedback">
+                                    La Contraseña debe tener minímo 8 caracteres
+                                </div>
+                                <div *ngIf="password2?.errors?.['Mustmatch'] " class="invalid-feedback">
+                                    <!-- <small class="text-danger">Las contraseñas no coinciden</small> -->
+                                    Las contraseñas no coinciden
                                 </div>
                         </div>
                         <div class="d-grid my-4">
