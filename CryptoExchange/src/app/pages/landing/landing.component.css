@@ -291,7 +291,7 @@ body {
   }
 
   .section-bg {
-    background-color: #f5f5ff;
+    background-color: #ececf0;
   }
 
   .section-title {
@@ -370,7 +370,7 @@ body {
   }
 
   .about .icon-box:hover .icon i {
-    color: #fff;
+    color: rgb(243, 239, 239);
   }
 
   .about .icon-box .title {
@@ -381,7 +381,7 @@ body {
   }
 
   .about .icon-box .title a {
-    color: #343a40;
+    color: #464d53;
     transition: 0.3s;
   }
 
@@ -401,7 +401,7 @@ body {
   # Counts
   --------------------------------------------------------------*/
   .counts {
-    background: #f5f5ff;
+    background: #eaeaf5;
     padding: 70px 0 60px;
   }
 
@@ -410,7 +410,7 @@ body {
     width: 100%;
     position: relative;
     text-align: center;
-    background: #fff;
+    background: rgb(255, 251, 251);
   }
 
   .counts .count-box i {
@@ -421,7 +421,7 @@ body {
     font-size: 20px;
     background: #1acc8d;
     padding: 12px;
-    color: #fff;
+    color: rgb(240, 240, 240);
     border-radius: 50px;
     display: inline-flex;
     align-items: center;
@@ -478,7 +478,7 @@ body {
 
   .testimonials .testimonial-item {
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
 
   .testimonials .testimonial-item .testimonial-img {
@@ -492,18 +492,18 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0 5px 0;
-    color: #fff;
+    color: rgb(255, 255, 255);
   }
 
   .testimonials .testimonial-item h4 {
     font-size: 14px;
-    color: #ddd;
+    color: rgb(214, 213, 213);
     margin: 0 0 15px 0;
   }
 
   .testimonials .testimonial-item .quote-icon-left,
   .testimonials .testimonial-item .quote-icon-right {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(245, 243, 243, 0.4);
     font-size: 26px;
   }
 
@@ -523,7 +523,7 @@ body {
   .testimonials .testimonial-item p {
     font-style: italic;
     margin: 0 auto 15px auto;
-    color: #eee;
+    color: rgb(238, 238, 238);
   }
 
   .testimonials .swiper-pagination {
@@ -535,11 +535,11 @@ body {
     width: 12px;
     height: 12px;
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(252, 248, 248, 0.4);
   }
 
   .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #1acc8d;
+    background-color: #18c085;
   }
 
   @media (min-width: 1024px) {
