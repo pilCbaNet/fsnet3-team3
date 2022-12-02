@@ -3,7 +3,7 @@
 }
 table, th, td {
     border-radius: 7px;
-    border-collapse: collapse;  
+    border-collapse: collapse;
   }
   th{
     background-color: #06283d;
@@ -11,7 +11,7 @@ table, th, td {
     color: whitesmoke;
   }
   table{
-    width: 100%;   
+    width: 100%;
   }
   th, td {
     padding: 10px;
@@ -41,4 +41,3 @@ table, th, td {
 
 
 
-  

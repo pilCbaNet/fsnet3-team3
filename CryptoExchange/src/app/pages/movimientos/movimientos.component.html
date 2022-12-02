@@ -14,7 +14,7 @@
       <tr *ngFor="let item of movimientosEnARS, index as i" role="button" routerLink={{item.detalle}}>
         <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
         <td>{{ item.operacion }}</td>
-        <td>{{ item.monto | currency }} {{item.moneda}}</td>
+        <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}">{{ item.monto | currency }} {{item.moneda}}</td>
         <td>{{ item.saldo | currency}} {{item.moneda}}</td>
         <td>{{ item.numeroDeCuenta }}</td>
       </tr>
@@ -29,12 +29,12 @@
       <th scope="col" style="width: 10%">N° de cuenta</th>
     </thead>
     <tbody data-link="row" class="rowlink">
-      
+
 
       <tr *ngFor="let item of movimientosEnBTC" role="button" routerLink={{item.detalle}}>
         <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
         <td>{{ item.operacion }}</td>
-        <td>{{ item.monto | currency }} {{item.moneda}}</td>
+        <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}">{{ item.monto | currency }} {{item.moneda}}</td>
         <td>{{ item.saldo | currency}} {{item.moneda}}</td>
         <td>{{ item.numeroDeCuenta }}</td>
       </tr>
