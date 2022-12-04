@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using MiBilleteraWebApi.Models;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MiBilleteraWebApi.Controllers

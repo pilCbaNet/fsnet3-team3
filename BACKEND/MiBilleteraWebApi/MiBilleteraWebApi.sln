@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBilleteraWebApi", "MiBilleteraWebApi\MiBilleteraWebApi.csproj", "{CA46FDB6-1A7D-4D94-A539-B9E24E649C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiBilleteraWebApi", "MiBilleteraWebApi\MiBilleteraWebApi.csproj", "{CA46FDB6-1A7D-4D94-A539-B9E24E649C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{7EDC5749-B4FC-4604-A19D-B88346587FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{706CF6A8-0D20-4BF9-8F37-FEA8E81F053D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CA46FDB6-1A7D-4D94-A539-B9E24E649C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA46FDB6-1A7D-4D94-A539-B9E24E649C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA46FDB6-1A7D-4D94-A539-B9E24E649C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDC5749-B4FC-4604-A19D-B88346587FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDC5749-B4FC-4604-A19D-B88346587FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDC5749-B4FC-4604-A19D-B88346587FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDC5749-B4FC-4604-A19D-B88346587FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706CF6A8-0D20-4BF9-8F37-FEA8E81F053D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706CF6A8-0D20-4BF9-8F37-FEA8E81F053D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706CF6A8-0D20-4BF9-8F37-FEA8E81F053D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706CF6A8-0D20-4BF9-8F37-FEA8E81F053D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
