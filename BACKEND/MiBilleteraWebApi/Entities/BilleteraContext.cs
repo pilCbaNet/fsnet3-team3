@@ -24,6 +24,8 @@ namespace Entities
         public virtual DbSet<Moneda> Monedas { get; set; } = null!;
         public virtual DbSet<Operacion> OperacionesDepositoOExtraccions { get; set; } = null!;
         public virtual DbSet<Provincia> Provincias { get; set; } = null!;
+        public object Operaciones { get; set; }
+        public object OperacionesDepositoOExtraccion { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Business;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,6 +11,7 @@ namespace MiBilleteraWebApi.Controllers
     public class OperacionesController : ControllerBase
     {
         // GET: api/<OperacionesController>
+        // probado funcionando, falta pasarlo al bc
         [HttpGet]
         public List<Operacion> Get()
         {
@@ -17,37 +19,61 @@ namespace MiBilleteraWebApi.Controllers
             {
                 return db.OperacionesDepositoOExtraccions.ToList();
             }
+
         }
 
-        // GET api/<OperacionesController>/5
+        //Funcionando ok
         [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<OperacionesController>
-        [HttpPost]
-        public void Post([FromBody] Operacion oOperacion)
+        public Operacion? Get(int id)
         {
             using (var db = new BilleteraContext())
             {
-                db.OperacionesDepositoOExtraccions.Add(oOperacion);
-                db.SaveChanges();
+                return new OperacionesBC().obtenerProvinvia(db, id);
             }
+
+        }
+
+
+
+        // POST api/<OperacionesController>
+        // funcionado ok
+        [HttpPost]
+        public void Post([FromBody] Operacion oOpernueva)
+        {
+            using (var db = new BilleteraContext())
+            {
+                new OperacionesBC().agregarOperacion(db, oOpernueva);
+
+            }
+
         }
 
         // PUT api/<OperacionesController>/5
+        //problemas en este, consultar en clase CS8602
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put([FromBody] int id, int Monto, bool EsDeposito)
         {
+            using (var db = new BilleteraContext())
+            {
+                Operacion? OperacVieja = db.OperacionesDepositoOExtraccions.FirstOrDefault(a => a.IdOperacion == id);
+                OperacVieja.Monto = Monto;
+                OperacVieja.EsDeposito = EsDeposito;
+                db.SaveChanges();
+                
+            }
         }
         
 
         // DELETE api/<OperacionesController>/5
+        //no usar
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            using (var db = new BilleteraContext())
+            {
+                new OperacionesBC().eliminarOperacion(db, id);
+            }
+
         }
     }
 }

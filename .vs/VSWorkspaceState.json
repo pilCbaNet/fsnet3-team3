@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BACKEND",
+    "\\BACKEND\\MiBilleteraWebApi",
+    "\\BACKEND\\MiBilleteraWebApi\\Entities"
   ],
-  "SelectedNode": "\\MiBilleteraWebApi.sln",
+  "SelectedNode": "\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi.sln",
   "PreviewInSolutionExplorer": false
 }

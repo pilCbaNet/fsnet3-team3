@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Business;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,6 +11,7 @@ namespace MiBilleteraWebApi.Controllers
     public class MonedasController : ControllerBase
     {
         // GET: api/<MonedasController>
+        //pasar el listar al bc
         [HttpGet]
         public List<Moneda> Get()
         {
@@ -19,34 +21,70 @@ namespace MiBilleteraWebApi.Controllers
             }
         }
 
-        // GET api/<MonedasController>/5
+        // GET api/<MonedasController>/5 
+        //probado ok.
         [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<MonedasController>
-        [HttpPost]
-        public void Post([FromBody] Moneda oMoneda)
+        public Moneda? Get(int id)
         {
             using (var db = new BilleteraContext())
             {
-                db.Monedas.Add(oMoneda);
-                db.SaveChanges();
+                return new MonedaBC().buscarMoneda(db, id);
             }
+
         }
 
-        // PUT api/<MonedasController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        // POST api/<MonedasController>
+        //probado ok
+        [HttpPost]
+        public void Post([FromBody] Moneda oMonedaNueva)
         {
+            using (var db = new BilleteraContext())
+            {
+                new MonedaBC().agregarMoneda(db, oMonedaNueva);
+
+            }
+
+        }
+
+
+        // PUT api/<MonedasController>/5
+        //probado ok
+        [HttpPut("{id}")]
+        public void Put(int id, string Nombre)
+        {
+            using (var db = new BilleteraContext())
+            {
+                new MonedaBC().modificarMoneda(db, id, Nombre);
+            }
+
         }
 
         // DELETE api/<MonedasController>/5
+        //no usar
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            try
+            {
+                using (var db = new BilleteraContext())
+                {
+                    //Provincia? oProvincia = db.Provincias.FirstOrDefault(x => x.IdProvincia == id);
+                    //db.Remove(oProvincia);
+                    //db.SaveChanges();
+                    new MonedaBC().eliminarMoneda(db, id);
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
         }
+
     }
 }
