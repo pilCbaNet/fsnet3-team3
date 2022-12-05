@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego\\Documents\\Archivos\\02 FACULTAD\\06 ISPC\\Pro\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego\\Documents\\Archivos\\02 FACULTAD\\06 ISPC\\Pro\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego\\Documents\\Archivos\\02 FACULTAD\\06 ISPC\\Pro\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
-        "projectName": "MiBilleteraWebApi",
-        "projectPath": "C:\\Users\\Diego\\Documents\\Archivos\\02 FACULTAD\\06 ISPC\\Pro\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
-        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego\\Documents\\Archivos\\02 FACULTAD\\06 ISPC\\Pro\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
+        "projectName": "Business",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,7 +25,73 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net60": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,7 +102,80 @@
         }
       },
       "frameworks": {
-        "net60": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+        "projectName": "MiBilleteraWebApi",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj"
+              },
+              "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Eze\\TP ISPC\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -61,12 +196,26 @@
               "version": "[6.2.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.418\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win7-x86": {
-          "#import": []
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

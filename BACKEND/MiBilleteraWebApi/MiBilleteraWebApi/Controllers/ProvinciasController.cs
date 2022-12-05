@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using MiBilleteraWebApi.Models;
+using Entities;
 using Microsoft.EntityFrameworkCore;
+using Business;
 
 namespace MiBilleteraWebApi.Controllers
 {
@@ -10,6 +11,7 @@ namespace MiBilleteraWebApi.Controllers
     public class ProvinciasController : ControllerBase
     {
         // GET: api/<Provincias>
+        // probado funcionando, falta consultar como generar un metodo con una lista
         [HttpGet]
         public List<Provincia> Get()
         {
@@ -20,51 +22,46 @@ namespace MiBilleteraWebApi.Controllers
         }
 
         // GET api/<Provincias>/5
+        //Probado ok.
         [HttpGet("{id}")]
         public Provincia? Get(int id)
         {
             using (var db = new BilleteraContext())
             {
-                return db.Provincias.Include(a => a.Localidades).FirstOrDefault(a=>a.IdProvincia==id);
+                return new ProvinciaBC().obtenerProvinvia(db, id);
             }
+
         }
 
         // POST api/<Provincias>
+        //Probado ok.
         [HttpPost]
-        public void Post([FromBody] Provincia oProvincia)
+        public void Post([FromBody] Provincia oprovnueva)
         {
             using (var db = new BilleteraContext())
             {
-                db.Provincias.Add(oProvincia);
-                db.SaveChanges();
+                new ProvinciaBC().agregarProvincia(db, oprovnueva);
+
             }
+
         }
 
         // PUT api/<Provincias>
+        //Probado ok.
         [HttpPut]
-        public void Put([FromBody] Provincia oProvincia)
+        public void Put(int id, string Nombre)
         {
             using (var db = new BilleteraContext())
             {
-                Provincia? provinciaVieja = db.Provincias.FirstOrDefault(a=>a.IdProvincia==oProvincia.IdProvincia);
-                provinciaVieja.Nombre = oProvincia.Nombre;
-                db.SaveChanges();
+                new ProvinciaBC().modificarProvincia(db, id, Nombre);
             }
+
         }
 
-        // PUT api/<Provincias>/5
-        [HttpPut("{id}")]
-        public void Put(int id, string nombre)
-        {
-            using (var db = new BilleteraContext())
-            {
-                Provincia? provinciaVieja = db.Provincias.FirstOrDefault(a => a.IdProvincia == id);
-                provinciaVieja.Nombre = nombre;
-                db.SaveChanges();
-            }
-        }
+
 
         // DELETE api/<Provincias>/5
+        //no usar
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -72,15 +69,21 @@ namespace MiBilleteraWebApi.Controllers
             {
                 using (var db = new BilleteraContext())
                 {
-                    Provincia? oProvincia = db.Provincias.FirstOrDefault(x => x.IdProvincia == id);
-                    db.Remove(oProvincia);
-                    db.SaveChanges();
+                    //Provincia? oProvincia = db.Provincias.FirstOrDefault(x => x.IdProvincia == id);
+                    //db.Remove(oProvincia);
+                    //db.SaveChanges();
+                    new ProvinciaBC().eliminarProvincia(db, id);
+
                 }
+
             }
             catch (Exception)
             {
+
                 throw;
-            }            
+            }
+
+
         }
     }
 }
