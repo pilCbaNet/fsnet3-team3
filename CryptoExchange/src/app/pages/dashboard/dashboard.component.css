@@ -3,13 +3,13 @@
 }
 .bordery{
   border-radius: 20px;
-  background-color: #1363df;
+  background-color: #1360d3;
 }
 .white-text{
-  color: white;
+  color: rgb(253, 253, 253);
 }
-.box{ 
-  background: #dff6ff;
+.box{
+  background: #d6f0fa;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }

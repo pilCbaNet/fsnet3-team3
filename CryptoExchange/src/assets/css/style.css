@@ -377,7 +377,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f5f5ff;
+  background-color: #f1f1fc;
 }
 
 .section-title {
@@ -392,7 +392,7 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #aaa9a9;
   font-family: "Poppins", sans-serif;
 }
 
@@ -412,7 +412,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #010483;
+  color: #050783;
 }
 
 /*--------------------------------------------------------------
@@ -425,7 +425,7 @@ section {
 .about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #010483;
+  color: #010380;
   margin-bottom: 15px;
 }
 
@@ -440,7 +440,7 @@ section {
   justify-content: center;
   width: 64px;
   height: 64px;
-  border: 2px solid #7ceec6;
+  border: 2px solid #77e4be;
   border-radius: 50px;
   transition: 0.5s;
 }
@@ -456,7 +456,7 @@ section {
 }
 
 .about .icon-box:hover .icon i {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .about .icon-box .title {
@@ -467,7 +467,7 @@ section {
 }
 
 .about .icon-box .title a {
-  color: #343a40;
+  color: #2f353a;
   transition: 0.3s;
 }
 
@@ -496,7 +496,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #fff;
+  background: rgb(245, 245, 245);
 }
 
 .counts .count-box i {
@@ -507,7 +507,7 @@ section {
   font-size: 20px;
   background: #1acc8d;
   padding: 12px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   border-radius: 50px;
   display: inline-flex;
   align-items: center;

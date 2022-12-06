@@ -32,6 +32,6 @@ export class MovimientosComponent implements OnInit {
       this.tipoDeMoneda = params['moneda'];
     })
 
- 
+
   }
 }
