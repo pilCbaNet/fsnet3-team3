@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Business;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -22,32 +23,43 @@ namespace MiBilleteraWebApi.Controllers
 
         // GET api/<ClientesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Cliente? Get(int id)
         {
-            return "value";
+            using (var db = new BilleteraContext())
+            {
+                return new ClienteBC().obtenerCliente(db, id);
+            }
+
         }
 
         // POST api/<ClientesController>
+        // listo falta probar
         [HttpPost]
         public void Post([FromBody] Cliente oCliente)
         {
             using (var db = new BilleteraContext())
             {
-                db.Clientes.Add(oCliente);
-                db.SaveChanges();
+                new ClienteBC().agregarCliente(db, oCliente);
             }
         }
 
         // PUT api/<ClientesController>/5
+        //probado
+        
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, string Nombre, string Apellido, String Cuil, DateTime FechaNac, String Usuario, string Password, int IdLocalidad)
         {
+            using (var db = new BilleteraContext())
+            {
+                new ClienteBC().modificarCliente(db, id, Nombre, Apellido, Cuil, FechaNac, Usuario, Password, IdLocalidad);
+            }
         }
 
         // DELETE api/<ClientesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void delete(int id, string Nombre, string Apellido, String Cuil, DateTime FechaNac, String Usuario, string Password, int IdLocalidad)
         {
+            
         }
     }
 }

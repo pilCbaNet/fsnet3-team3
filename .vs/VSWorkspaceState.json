@@ -3,8 +3,8 @@
     "",
     "\\BACKEND",
     "\\BACKEND\\MiBilleteraWebApi",
-    "\\BACKEND\\MiBilleteraWebApi\\Entities"
+    "\\BACKEND\\MiBilleteraWebApi\\Business"
   ],
-  "SelectedNode": "\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi.sln",
+  "SelectedNode": "\\BACKEND\\MiBilleteraWebApi\\Business\\ClienteBC.cs",
   "PreviewInSolutionExplorer": false
 }

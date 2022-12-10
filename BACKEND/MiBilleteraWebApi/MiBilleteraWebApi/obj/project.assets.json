@@ -10102,24 +10102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Windows 10\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
       "projectName": "MiBilleteraWebApi",
-      "projectPath": "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
-      "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10133,11 +10128,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj"
+            "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj"
             },
-            "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Windows 10\\Source\\Repos\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+            "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
             }
           }
         }
@@ -10190,7 +10185,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
