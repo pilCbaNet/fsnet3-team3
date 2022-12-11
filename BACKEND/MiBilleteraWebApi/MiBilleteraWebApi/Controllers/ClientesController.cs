@@ -1,6 +1,9 @@
 ﻿using Business;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
+using System.Text;
+
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -33,7 +36,7 @@ namespace MiBilleteraWebApi.Controllers
         }
 
         // POST api/<ClientesController>
-        // listo falta probar
+        // listo 
         [HttpPost]
         public void Post([FromBody] Cliente oCliente)
         {
@@ -45,7 +48,7 @@ namespace MiBilleteraWebApi.Controllers
 
         // PUT api/<ClientesController>/5
         //probado
-        
+
         [HttpPut("{id}")]
         public void Put(int id, string Nombre, string Apellido, String Cuil, DateTime FechaNac, String Usuario, string Password, int IdLocalidad)
         {
@@ -57,9 +60,22 @@ namespace MiBilleteraWebApi.Controllers
 
         // DELETE api/<ClientesController>/5
         [HttpDelete("{id}")]
-        public void delete(int id, string Nombre, string Apellido, String Cuil, DateTime FechaNac, String Usuario, string Password, int IdLocalidad)
+        public void delete(int id)
         {
-            
+
+        }
+
+
+
+        [HttpPost("{Usuario}")]
+        //hacer en post
+        public void get([FromBody] string Usuario, string password)
+        {
+            using (var db = new BilleteraContext())
+            {
+                new ClienteBC().accederConPassword(db, Usuario, password);
+
+            }
         }
     }
 }
