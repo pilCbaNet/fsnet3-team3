@@ -36,6 +36,18 @@
                             </div>
                         </div>
                         <div class="mb-3">
+                            <label for="cuil" class="form-label">CUIL</label>
+                            <input type="text" ngModel pattern = "\b(20|23|24|27|30|33|34)(\D)[0-9]{8}(\D)[0-9]{1}" class="form-control form-control-sm" id="cuil" formControlName="cuil"
+                                [ngClass]="cuil?.invalid && (cuil?.dirty || cuil?.touched) ? 'is-invalid' : ''"
+                            >
+                                <div *ngIf="cuil?.errors?.['required']" class="invalid-feedback">
+                                    Debe ingresar su CUIL
+                                </div>
+                                <div *ngIf="cuil?.errors?.['maxlength'] " class="invalid-feedback">
+                                    El CUIL es inválido
+                                </div>
+                        </div>
+                        <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control form-control-sm" id="email" formControlName="email"
                                 [ngClass]="email?.invalid && (email?.dirty || email?.touched) ? 'is-invalid' : ''"

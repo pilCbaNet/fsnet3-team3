@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SignUp } from 'src/app/models/signup';
+import { LoginService } from 'src/app/services/login.service';
 import { dateValidator } from 'src/app/validators/dateMaxVal';
 import { passwordMatch } from 'src/app/validators/passMatch';
 
@@ -12,11 +15,12 @@ export class SignupComponent implements OnInit {
   public maxDate!:String;
 
   form!:FormGroup;
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private loginService:LoginService, private router:Router) {
     this.form = this.formBuilder.group({
       name:['', Validators.required],
       lastname:['', Validators.required],
       birthdate:['', Validators.required ], //fecha nacimiento
+      cuil:['', Validators.required],
       email:['', [Validators.required, Validators.email]],
       password:['', [Validators.required, Validators.minLength(8)]],
       password2:['', [Validators.required, Validators.minLength(8)]],
@@ -36,6 +40,9 @@ export class SignupComponent implements OnInit {
   get birthdate(){
     return this.form.get("birthdate")
   }
+  get cuil(){
+    return this.form.get("cuil")
+  }
   get email(){
     return this.form.get("email")
   }
@@ -53,6 +60,19 @@ export class SignupComponent implements OnInit {
   }
 
   signUp(){
+    if (this.form.valid){
+      let Nombre:string=this.form.get('name')?.value;
+      let Apellido:string=this.form.get('lastname')?.value;
+      let Cuil:string=this.form.get('cuil')?.value;
+      let FechaNacimiento:any=this.form.get('birthdate')?.value;
+      let Usuario:string=this.form.get('email')?.value;
+      let Contrasenia:string=this.form.get('password')?.value;
+      let signup:SignUp = new SignUp(Nombre, Apellido, Cuil, FechaNacimiento, Usuario, Contrasenia)
+     this.loginService.signUp(signup).subscribe(respuestaOk=>{
+      this.router.navigate(['login']);
+     })
+    }
+
     alert(`Hola ${this.form.value.name}, Bienvenido!`)
     console.log(this.form.value.name)
   }
