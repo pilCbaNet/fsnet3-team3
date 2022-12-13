@@ -33,6 +33,8 @@ namespace Entities
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=DESKTOP-H342I2C\\SQLEXPRESS; Database=master; User=sa; Password=Ese36429770; TrustServerCertificate=True");
+                //("Server=PC-LUCA\\SQLEXPRESS; Database=Billetera; User=sa; Password=Luca1234; TrustServerCertificate=True");
+                //Server=DESKTOP-H342I2C\\SQLEXPRESS; Database=master; User=sa; Password=Ese36429770; TrustServerCertificate=True
             }
         }
 
@@ -50,7 +52,7 @@ namespace Entities
                     .IsUnicode(false);
 
                 entity.Property(e => e.Contrasenia)
-                    .HasMaxLength(50)
+                    .HasMaxLength(250)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Cuil)

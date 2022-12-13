@@ -13,6 +13,7 @@ namespace Business
 
         public Cliente agregarCliente(BilleteraContext db, Cliente oClienteNuevo)
         {
+            oClienteNuevo.Contrasenia = Encriptar(oClienteNuevo.Contrasenia);
             db.Clientes.Add(oClienteNuevo);
             db.SaveChanges();
             return oClienteNuevo;
@@ -32,7 +33,7 @@ namespace Business
                     oClienteViejoViejo.Cuil = Cuil;
                     oClienteViejoViejo.FechaNacimiento = FechaNac;
                     oClienteViejoViejo.Usuario = Usuario;
-                    oClienteViejoViejo.Contrasenia = Password;
+                    oClienteViejoViejo.Contrasenia = Encriptar(Password);
                     oClienteViejoViejo.IdLocalidad = IdLocalidad;
                     db.SaveChanges();
 
@@ -76,24 +77,41 @@ namespace Business
 
         }
 
-        public static string GetSHA256(string str)
+
+        public Cliente accederConPassword(BilleteraContext db, string usuario, string password)
         {
-            SHA256 sha256 = SHA256Managed.Create();
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            byte[] stream = null;
-            StringBuilder sb = new StringBuilder();
-            stream = sha256.ComputeHash(encoding.GetBytes(str));
-            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
-            return sb.ToString();
+
+            Cliente clienteChequear = (Cliente)db.Clientes.FirstOrDefault(x => x.Usuario == usuario);
+            if (clienteChequear != null && DesEncriptar(clienteChequear.Contrasenia) == password)
+            {
+                clienteChequear.Contrasenia = DesEncriptar(clienteChequear.Contrasenia);
+                return clienteChequear;
+            }
+            return null;
+            
+        
+
         }
 
-        public Cliente accederConPassword(BilleteraContext db, string usuario, string password) 
+        /// Encripta una cadena
+        public static string Encriptar(string _cadenaAencriptar)
         {
-            Cliente clienteChequear = (Cliente)db.Clientes.FirstOrDefault(x => x.Usuario == usuario && x.Contrasenia == password);
-            return clienteChequear;
-        
-        
+            string result = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(_cadenaAencriptar);
+            result = Convert.ToBase64String(encryted);
+            return result;
         }
+
+        /// Desencripta una cadena
+        public static string DesEncriptar( string _cadenaAdesencriptar)
+        {
+            string result = string.Empty;
+            byte[] decryted = Convert.FromBase64String(_cadenaAdesencriptar);
+            //result = System.Text.Encoding.Unicode.GetString(decryted, 0, decryted.ToArray().Length);
+            result = System.Text.Encoding.Unicode.GetString(decryted);
+            return result;
+        }
+
 
     }
 }

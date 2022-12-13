@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jsGDvF/DNsKrdFbUB4dfLG2UDkIMitUqicMElE+1D62NE0gwg37W5UkfTw4aIx1soDfU6VP59/beGibAIU2aLw==",
+  "dgSpecHash": "OQueUtO59OiGHjWnhG84K8a3k5I8QZMTHTZhf9JPEmqIOyuowfZAXnGD4Ohxa0etoutheqsfHn/iFP6de0pGow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+  "projectFilePath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

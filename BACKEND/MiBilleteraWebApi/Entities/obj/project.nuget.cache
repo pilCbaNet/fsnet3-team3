@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RzRuQMd7xxrSHiSKFVaKbXrIMQ2GmTCt2ujhQkbEXK3Lk8J6tFLJFOnA5rim2+cqrnNH71gaejdncyCasvFxiw==",
+  "dgSpecHash": "w6i9nx/x3V2pVJ/klRIN97cgrB06KXtn/3KmOYnIvw/C8hMsDJTIgL/4snoNI+x/zv1yEzYvKJyOqBL+6E2FuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

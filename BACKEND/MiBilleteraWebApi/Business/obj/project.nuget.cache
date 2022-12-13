@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sa8WBXS+ONUH89axlT0bim47DQ/Wra9k9xQCCzmhvC3XaKDCLvWhzmuyx2fPWCw9KW/Owfq6VDe1Xos0a7vUBQ==",
+  "dgSpecHash": "qEtICAGRUi0ZC++HOv5wmvepHLuYThXvvNPGUw/bfznb/hrptpLoYSSqixKN3/sGrbx3KEeX34SKcGiwlpwHLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\repo copia\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
+  "projectFilePath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
