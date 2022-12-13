@@ -8,7 +8,7 @@
         </div>
         <div class="card-body">
           <h5><i class="bi bi-currency-dollar"></i>{{ saldos[0].saldo }}</h5>
-          <a href="/movimientos" [routerLink]="['/movimientos','ARS']" class="btn btn-info"
+          <a  [routerLink]="['/movimientos','ARS']" class="btn btn-info"
             >Últimos movimientos</a
           >
         </div>
@@ -25,7 +25,7 @@
         <div class="card-body">
           <h5><i class="bi bi-currency-bitcoin"></i>{{ saldos[1].saldo }}</h5>
           <a
-            href="/movimientos"
+          
             [routerLink]="['/movimientos', 'BTC']"
             class="btn btn-info"
             style="--bs-btn-color: black"
@@ -41,8 +41,8 @@
   <br />
   <br />
     <div class="row box justify-content-around">
-      <a href="/movimientos" routerLink="/movimientos" class="btn btn-info btn-block col-md-4 col-lg-2">Retirá</a>
-      <a href="/movimientos" routerLink="/movimientos" class="btn btn-info btn-block col-md-4 col-lg-2">Depositá</a>
+      <a href="/retiro" routerLink="/retiro" class="btn btn-info btn-block col-md-4 col-lg-2">Retirá</a>
+      <a href="/deposito" routerLink="/deposito" class="btn btn-info btn-block col-md-4 col-lg-2">Depositá</a>
     </div>
 
 </div>

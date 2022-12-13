@@ -9,6 +9,7 @@ import { DetallesMovimientosComponent } from './pages/detalles-movimientos/detal
 import { RetiroDineroComponent } from './pages/retiro-dinero/retiro-dinero.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { DepositoDineroComponent } from './pages/deposito-dinero/deposito-dinero.component';
 
 
 
@@ -22,9 +23,11 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'movimientos/:moneda', component: MovimientosComponent },
   { path: 'retiro', component: RetiroDineroComponent },
+  { path: 'deposito', component: DepositoDineroComponent},
   { path: 'detalles/:movimiento', component: DetallesMovimientosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
+  
 ];
 
 @NgModule({
