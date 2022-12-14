@@ -69,12 +69,12 @@ namespace MiBilleteraWebApi.Controllers
 
         [HttpPost("{Usuario}")]
         //hacer en post
-        public Cliente get([FromBody] string Usuario, string password)
+        public Cliente get([FromBody] Login login)
         {
             Cliente nuevoacceso;
             using (var db = new BilleteraContext())
             {
-                nuevoacceso = new ClienteBC().accederConPassword(db, Usuario, password); 
+                nuevoacceso = new ClienteBC().accederConPassword(db, login.email, login.password); 
 
             }
             return nuevoacceso;
