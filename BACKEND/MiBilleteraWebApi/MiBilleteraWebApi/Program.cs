@@ -22,7 +22,6 @@ builder.Services.AddSwaggerGen();
 
 //Esta linea sirve para ignorar la referencia circular
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

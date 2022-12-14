@@ -67,7 +67,7 @@ namespace MiBilleteraWebApi.Controllers
 
 
 
-        [HttpPost("{Usuario}")]
+        [HttpPost("/api/login")]
         //hacer en post
         public Cliente get([FromBody] Login login)
         {
