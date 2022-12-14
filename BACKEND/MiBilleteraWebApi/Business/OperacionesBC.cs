@@ -47,5 +47,38 @@ namespace Business
 
         }
 
+        public int debitoCredito(BilleteraContext db, int idCuenta, int monto, bool esDeposito)
+        {
+            //Obtiene entidad cuenta
+            Cuenta cuenta = db.Cuentas.FirstOrDefault(x => x.IdCuenta == idCuenta);
+
+            //Si es deposito suma el dinero, si no controla que se pueda extraer y extrae
+            if (esDeposito)
+            {
+                cuenta.Saldo += monto;
+                db.SaveChanges();
+            }else if(cuenta.Saldo - monto < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                cuenta.Saldo -= monto;
+                db.SaveChanges();
+            }
+
+            //Crea y agrega nueva operacion
+            Operacion oOperNueva = new Operacion();
+
+            oOperNueva.EsDeposito = esDeposito;
+            oOperNueva.Fecha = DateTime.Now;
+            oOperNueva.Monto = monto;
+            oOperNueva.FechaBaja = null; 
+            oOperNueva.IdCuenta = idCuenta;
+
+            db.OperacionesDepositoOExtraccions.Add(oOperNueva);
+            db.SaveChanges();
+            return 1;
+        }
     }
 }

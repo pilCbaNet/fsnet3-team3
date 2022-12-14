@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {}
+    "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {}
   },
   "projects": {
-    "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
+    "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\obj\\",
+        "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\luca.bessone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luca.bessone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+              "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
               }
             }
           }
@@ -55,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,21 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+    "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\luca.bessone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luca.bessone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,7 +128,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -128,21 +138,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {
+    "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
         "projectName": "MiBilleteraWebApi",
-        "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
+        "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\MiBilleteraWebApi.csproj",
+        "packagesPath": "C:\\Users\\luca.bessone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\MiBilleteraWebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luca.bessone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,11 +170,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
-                "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj"
+              "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Business\\Business.csproj"
               },
-              "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+              "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\luca.bessone\\Desktop\\ISPC\\fsnet3-team3\\BACKEND\\MiBilleteraWebApi\\Entities\\Entities.csproj"
               }
             }
           }
@@ -200,7 +214,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -212,7 +227,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
