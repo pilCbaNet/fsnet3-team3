@@ -39,10 +39,32 @@ namespace Business
             return db.Cuentas.FirstOrDefault(a => a.IdCuenta == id);
         }
 
-        public void listarCunetas(BilleteraContext db)
+        public void listarCuentas(BilleteraContext db)
         {
             db.Cuentas.ToList();
 
+        }
+
+        public (int, int) obtenerSaldos(BilleteraContext db, int id)
+        {
+
+            List<Cuenta> cuentas = new List<Cuenta>();
+            cuentas = (from c in db.Cuentas where c.IdCuenta == id select c).ToList();
+
+            int saldoPesos = 0;
+            int saldoBt = 0;
+            foreach(Cuenta saldo in cuentas)
+            {
+                if(saldo.IdMoneda == 1)
+                {
+                    saldoPesos += saldo.Saldo;
+                }
+                else
+                {
+                    saldoBt += saldo.Saldo;
+                }
+            }
+            return (saldoPesos, saldoBt);
         }
     }
 }
