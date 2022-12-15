@@ -13,10 +13,10 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   iniciarSesion(login:Login):Observable<any>{
-    return this.http.post('http://localhost:3000/posts', login)
+    return this.http.post('#', login)
   }
 
   signUp(signup:SignUp):Observable<any>{
-    return this.http.post('http://localhost:3000/posts', signup)
+    return this.http.post('https://localhost:7195/api/Clientes', signup)
   }
 }
