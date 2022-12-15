@@ -1,1 +1,35 @@
-<p>deposito-dinero works!</p>
+<div class="container">
+    <div class="border border rounded-3 shadow p-3 mt-3 mb-3">
+        <div class="d-flex justify-content-between mb-5 mt-3">
+            <h3>Depositar Dinero</h3>
+            <div class="d-flex justify-content-around align-items-center" style="width: 75px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16">
+                    <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+                </svg>
+            </div>
+        </div>
+        <form [formGroup]="form" action="#">
+            <div>
+                <label for="selectOp">Cuenta</label>
+                <select class="form-select decorated" aria-label="Default select example" id="selectCuenta" formControlName="selectCuenta">
+                    <option value="">---Seleccionar---</option>
+                    <option value="1">Cuenta en ARS</option>
+                    <option value="2">Cuenta en BTC</option>
+                </select>
+
+                <!-- Aca se renderiza el contenido segun lo seleccionado -->
+                <div class="input-group mt-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" placeholder="Monto" id="amountCash" formControlName="amountCash">
+                </div>
+            </div>
+            <div class="d-grid my-4">
+                <button type="submit" class="btn btn-primary mt-5" [disabled]="!form.valid" (click)="realizarOperacion()">
+                    Enviar
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
