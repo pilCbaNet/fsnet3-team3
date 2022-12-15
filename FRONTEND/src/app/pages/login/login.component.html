@@ -34,10 +34,10 @@
                     </div>
                 </div>
                 <div class="d-grid my-4">
-                    <a href="/dashboard"> <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+                     <button type="submit" class="btn btn-primary" [disabled]="!form.valid" (click)="login()">
                         Iniciar Sesión
                     </button>
-                  </a>
+                  
                 </div>
                 <div class="my-3">
                     <span>No tienes cuenta? <a routerLink="/signup">Regístrate</a></span>
