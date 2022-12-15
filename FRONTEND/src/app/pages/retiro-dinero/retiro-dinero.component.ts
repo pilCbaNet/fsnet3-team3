@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Operacion } from 'src/app/models/operacion';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-retiro-dinero',
@@ -8,31 +10,36 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RetiroDineroComponent implements OnInit {
   public selectOP:any;
-  
+  fecha = new Date()
   form!:FormGroup
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private operacionesService:OperacionesService) {
     this.form = this.formBuilder.group({
-      selectOp:['', Validators.required],
+      selectCuenta:['', Validators.required],
       amountCash:['', Validators.required],
-      bankAccount:['', Validators.required],
-      //paypalAccount:['', Validators.required]
     })
   }
 
-  get selectOp(){
+  get selectCuenta(){
     return this.form.get("selectOp")
   }
   get amountCash(){
     return this.form.get("amountCash")
   }
-  get bankAccount(){
-    return this.form.get("bankAccount")
-  }
-  get paypalAccount(){
-    return this.form.get("paypalAccount")
-  }
 
   ngOnInit(): void {
+  }
+
+  realizarOperacion(){
+    if(this.form.valid){
+      let Monto:number=this.form.get('amountCash')?.value;
+      let Cuenta:string=this.form.get('selectCuenta')?.value;
+      let Fecha:any=this.fecha;
+      let EsDeposito:boolean=false;
+      let operacion:Operacion= new Operacion(Fecha, EsDeposito, Monto, Cuenta);
+      this.operacionesService.realizarOperacion(operacion).subscribe(respuestaOk=>{
+        alert('Operación realizada con éxito!')
+      })
+    }
   }
 
 }
