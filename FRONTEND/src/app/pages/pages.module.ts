@@ -11,6 +11,7 @@ import { RetiroDineroComponent } from './retiro-dinero/retiro-dinero.component';
 import { DepositoDineroComponent } from './deposito-dinero/deposito-dinero.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MovimientosBtcComponent } from './movimientos-btc/movimientos-btc.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RetiroDineroComponent,
     DepositoDineroComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MovimientosBtcComponent
   ],
   imports: [
     CommonModule,

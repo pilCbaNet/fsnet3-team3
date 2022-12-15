@@ -21,15 +21,9 @@ export class DetallesMovimientosComponent implements OnInit {
         this.movimiento = params['movimiento'];
       }
     );
-    this.cuenta.obtenerUltimosMovimientosEnARS().subscribe(data => {
+    this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
       console.log(data);
       this.movimientosEnARS = data;
     })
-
-    this.cuenta.obtenerUltimosMovimientosEnBTC().subscribe(data => {
-      console.log(data);
-      this.movimientosEnBTC = data;
-    })
-
 }
 }

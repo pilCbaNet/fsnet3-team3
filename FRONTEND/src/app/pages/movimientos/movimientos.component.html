@@ -1,6 +1,6 @@
-<div [ngSwitch]="tipoDeMoneda" class="table-responsive">
+<div class="table-responsive">
   <h1>Últimos Movimientos</h1>
-  <table *ngSwitchCase="'ARS'" class="table table-hover">
+  <table class="table table-hover">
     <thead>
       <th scope="col">Fecha</th>
       <th scope="col" style="width: 20%">Operación</th>
@@ -11,35 +11,14 @@
     <tbody data-link="row" class="rowlink">
       <!-- para que esto muestre datos, primero hay que levantar la API en la terminal con "json-server --watch db.json" -->
 
-      <tr *ngFor="let item of movimientosEnARS, index as i" role="button" routerLink={{item.detalle}}>
-        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
-        <td>{{ item.operacion }}</td>
-        <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}">{{ item.monto | currency }} {{item.moneda}}</td>
-        <td>{{ item.saldo | currency}} {{item.moneda}}</td>
-        <td>{{ item.numeroDeCuenta }}</td>
+      <tr *ngFor="let item of movimientos" role="button" routerLink={{item.detalle}}>
+        <td  *ngIf="item.moneda == 'ARS'" >{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
+        <td  *ngIf="item.moneda == 'ARS'" >{{ item.operacion }}</td>
+        <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}"  *ngIf="item.moneda == 'ARS'">{{ item.monto | currency }} {{item.moneda}}</td>
+        <td  *ngIf="item.moneda == 'ARS'" >{{ item.saldo | currency}} {{item.moneda}}</td>
+        <td  *ngIf="item.moneda == 'ARS'" >{{ item.numeroDeCuenta }}</td>
       </tr>
     </tbody>
-  </table>
-  <table *ngSwitchCase="'BTC'" class="table table-hover">
-    <thead>
-      <th scope="col">Fecha</th>
-      <th scope="col" style="width: 20%">Operación</th>
-      <th scope="col" style="width: 20%">Monto</th>
-      <th scope="col">Saldo</th>
-      <th scope="col" style="width: 10%">N° de cuenta</th>
-    </thead>
-    <tbody data-link="row" class="rowlink">
-
-
-      <tr *ngFor="let item of movimientosEnBTC" role="button" routerLink={{item.detalle}}>
-        <td>{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
-        <td>{{ item.operacion }}</td>
-        <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}">{{ item.monto | currency }} {{item.moneda}}</td>
-        <td>{{ item.saldo | currency}} {{item.moneda}}</td>
-        <td>{{ item.numeroDeCuenta }}</td>
-      </tr>
-    </tbody>
-  </table>
 <div>
 
 <a href="/dashboard" routerLink="/dashboard" class="btn btn-info">Volver</a>

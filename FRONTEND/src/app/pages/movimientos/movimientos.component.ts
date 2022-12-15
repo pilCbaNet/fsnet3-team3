@@ -11,27 +11,13 @@ import { HttpParams } from '@angular/common/http';
 })
 export class MovimientosComponent implements OnInit {
   hoy = new Date();
-  movimientosEnARS: any;
-  movimientosEnBTC:any;
-  tipoDeMoneda!:any;
+  movimientos: any;
   constructor(private cuenta: MovimientosService, private ruta:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.cuenta.obtenerUltimosMovimientosEnARS().subscribe(data => {
+    this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
       console.log(data);
-      this.movimientosEnARS = data;
+      this.movimientos = data;
     })
-
-    this.cuenta.obtenerUltimosMovimientosEnBTC().subscribe(data => {
-      console.log(data);
-      this.movimientosEnBTC = data;
-    })
-
-    this.ruta.params.subscribe((params:Params) =>{
-      console.log(params['moneda'])
-      this.tipoDeMoneda = params['moneda'];
-    })
-
-
   }
 }

@@ -9,14 +9,9 @@ export class MovimientosService {
 
   constructor(private http:HttpClient) { }
   
-  obtenerUltimosMovimientosEnARS():Observable<any>
+  obtenerUltimosMovimientos():Observable<any>
 {
-  return this.http.get('http://localhost:3000/movimientosEnARS')
-}
-
-obtenerUltimosMovimientosEnBTC():Observable<any>
-{
-  return this.http.get('http://localhost:3000/movimientosEnBTC')
+  return this.http.get('http://localhost:3000/movimientos')
 }
 
 obtenerSaldo():Observable<any>
