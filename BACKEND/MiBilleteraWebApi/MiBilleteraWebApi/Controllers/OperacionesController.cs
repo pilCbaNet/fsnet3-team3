@@ -59,10 +59,10 @@ namespace MiBilleteraWebApi.Controllers
                 OperacVieja.Monto = Monto;
                 OperacVieja.EsDeposito = EsDeposito;
                 db.SaveChanges();
-                
+
             }
         }
-        
+
 
         // DELETE api/<OperacionesController>/5
         //no usar
@@ -75,5 +75,27 @@ namespace MiBilleteraWebApi.Controllers
             }
 
         }
+
+        [HttpGet("/api/obtenerOperaciones")]
+
+        public List<Operacion> obtenerOperaciones(int id)
+        {
+            using (var db = new BilleteraContext())
+            {
+                return new OperacionesBC().listarOperaciones(db, id);
+            }
+
+        }
+
+        [HttpGet("/api/debitoCredito")]
+        public int debitoCredito(int id, int monto, bool esDeposito)
+        {
+            using (var db = new BilleteraContext())
+            {
+                return new OperacionesBC().debitoCredito(db, id, monto, esDeposito);
+            }
+
+        }
+
     }
 }

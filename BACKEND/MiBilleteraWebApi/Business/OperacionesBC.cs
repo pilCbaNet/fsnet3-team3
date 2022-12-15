@@ -41,9 +41,11 @@ namespace Business
 
 
 
-        public List<Operacion> listarOperaciones(BilleteraContext db) 
+        public List<Operacion> listarOperaciones(BilleteraContext db,int id) 
         {
-            return db.OperacionesDepositoOExtraccions.ToList();
+            List<Operacion> operaciones = new List<Operacion>();
+            operaciones = (from o in db.OperacionesDepositoOExtraccions where o.IdCuenta == id select o).ToList();
+            return operaciones;
 
         }
 

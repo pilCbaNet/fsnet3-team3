@@ -14,15 +14,6 @@ namespace MiBilleteraWebApi.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
-        // GET: api/<ClientesController>
-        [HttpGet]
-        public List<Cliente> Get()
-        {
-            using (var db = new BilleteraContext())
-            {
-                return db.Clientes.ToList();
-            }
-        }
 
         // GET api/<ClientesController>/5
         [HttpGet("{id}")]
@@ -67,14 +58,13 @@ namespace MiBilleteraWebApi.Controllers
 
 
 
-        [HttpPost("{Usuario}")]
-        //hacer en post
-        public Cliente get([FromBody] string Usuario, string password)
+        [HttpGet]
+        public Cliente get([FromBody] Login login)
         {
             Cliente nuevoacceso;
             using (var db = new BilleteraContext())
             {
-                nuevoacceso = new ClienteBC().accederConPassword(db, Usuario, password); 
+                nuevoacceso = new ClienteBC().accederConPassword(db, login.email, login.password); 
 
             }
             return nuevoacceso;

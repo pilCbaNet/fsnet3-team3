@@ -10,6 +10,8 @@ builder.Services.AddCors(options => {
     options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
     {
         policy.WithOrigins("*");
+        policy.AllowAnyMethod();
+        policy.AllowAnyHeader();
     });
 });
 
@@ -22,7 +24,6 @@ builder.Services.AddSwaggerGen();
 
 //Esta linea sirve para ignorar la referencia circular
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

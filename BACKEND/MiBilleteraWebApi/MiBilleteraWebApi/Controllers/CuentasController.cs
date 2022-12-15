@@ -60,5 +60,14 @@ namespace MiBilleteraWebApi.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpGet("/api/obtenerSaldos")]
+        public (int,int) GetSaldos(int id)
+        {
+            using (var db = new BilleteraContext())
+            {
+                return new CuentaBC().obtenerSaldos(db, id);
+            }
+        }
     }
 }
