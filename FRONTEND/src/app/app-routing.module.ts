@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MovimientosComponent } from './pages/movimientos/movimientos.component';
+import { MovimientosComponent } from './pages/movimientos-ars/movimientos.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { DetallesMovimientosComponent } from './pages/detalles-movimientos/detalles-movimientos.component';
 import { RetiroDineroComponent } from './pages/retiro-dinero/retiro-dinero.component';

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
-import { MovimientosComponent } from './movimientos/movimientos.component';
+import { MovimientosComponent } from './movimientos-ars/movimientos.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
