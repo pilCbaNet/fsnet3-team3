@@ -58,8 +58,8 @@ namespace MiBilleteraWebApi.Controllers
 
 
 
-        [HttpGet]
-        public Cliente get([FromBody] Login login)
+        [HttpPost("/api/login")]
+        public Cliente post([FromBody] Login login)
         {
             Cliente nuevoacceso;
             using (var db = new BilleteraContext())

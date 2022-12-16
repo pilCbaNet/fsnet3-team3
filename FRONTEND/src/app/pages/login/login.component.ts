@@ -10,36 +10,49 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form!:FormGroup;
+  form!: FormGroup;
+  estaAutenticado = false;
 
-  constructor(private formBuilder:FormBuilder, private loginService:LoginService, private router:Router) {
+  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router) {
     this.form = this.formBuilder.group({
-      email:['', [Validators.required, Validators.email]], //cuando hay mas de un "validators" deben ir dentro de un array
-      password:['', Validators.required]
+      email: ['', [Validators.required, Validators.email]], //cuando hay mas de un "validators" deben ir dentro de un array
+      password: ['', Validators.required]
     })
   }
 
-  get email(){
+  get email() {
     return this.form.get("email")
   }
-  get password(){
+  get password() {
     return this.form.get("password")
   }
 
   ngOnInit(): void {
   }
-  login(){
-    if (this.form.valid){
-      let email:string=this.form.get('email')?.value;
-      let password:string=this.form.get('password')?.value;
-      let login:Login=new Login(email, password);
-      this.loginService.iniciarSesion(login).subscribe(respuestaOk => {
-        this.router.navigate(['dashboard']);
+  login() {
+    if (this.form.valid) {
+      let email: string = this.form.get('email')?.value;
+      let password: string = this.form.get('password')?.value;
+      let login: Login = new Login(email, password);
+      this.loginService.iniciarSesion(login).subscribe({
+        next: (data) => {
+          console.log(data);
+          if (data != null) {
+            this.form.reset();
+            this.estaAutenticado = true;
+            this.router.navigate(['dashboard']);
+          }
+          else {
+            this.estaAutenticado = false;
+            alert('Ups. Usuario y/o contraseña incorrectos');
+          }
 
+        }
       })
-    }
+    };
 
-    console.log('logged!')
   }
-
 }
+  
+
+
