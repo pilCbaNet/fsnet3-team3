@@ -45,26 +45,32 @@ namespace Business
 
         }
 
-        public (int, int) obtenerSaldos(BilleteraContext db, int id)
+        public Saldos obtenerSaldos(BilleteraContext db, int id)
         {
 
             List<Cuenta> cuentas = new List<Cuenta>();
-            cuentas = (from c in db.Cuentas where c.IdCuenta == id select c).ToList();
+            cuentas = (from c in db.Cuentas where c.IdCliente == id select c).ToList();
 
             int saldoPesos = 0;
-            int saldoBt = 0;
+            int saldoBtc = 0;
             foreach(Cuenta saldo in cuentas)
             {
-                if(saldo.IdMoneda == 1)
+                if(saldo.EstaHabilitada == true && saldo.FechaBaja == null)
                 {
-                    saldoPesos += saldo.Saldo;
-                }
-                else
-                {
-                    saldoBt += saldo.Saldo;
+                    if (saldo.IdMoneda == 1)
+                    {
+                        saldoPesos += saldo.Saldo;
+                    }
+                    else
+                    {
+                        saldoBtc += saldo.Saldo;
+                    }
                 }
             }
-            return (saldoPesos, saldoBt);
+            Saldos saldos = new Saldos();
+            saldos.valorPesos = saldoPesos;
+            saldos.valorBTC = saldoBtc;
+            return saldos;
         }
     }
 }

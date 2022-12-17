@@ -62,11 +62,11 @@ namespace MiBilleteraWebApi.Controllers
         }
 
         [HttpGet("/api/obtenerSaldos")]
-        public (int,int) GetSaldos(int id)
+        public Saldos GetSaldos(int idCliente)
         {
             using (var db = new BilleteraContext())
             {
-                return new CuentaBC().obtenerSaldos(db, id);
+                return new CuentaBC().obtenerSaldos(db, idCliente);
             }
         }
     }
