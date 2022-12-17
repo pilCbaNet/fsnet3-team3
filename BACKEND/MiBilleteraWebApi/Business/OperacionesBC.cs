@@ -41,24 +41,28 @@ namespace Business
 
 
 
-        public List<Operacion> listarOperaciones(BilleteraContext db,int id) 
+        public List<Operacion> listarOperaciones(BilleteraContext db,int idCliente, int moneda) 
         {
             List<Operacion> operaciones = new List<Operacion>();
-            operaciones = (from o in db.OperacionesDepositoOExtraccions where o.IdCuenta == id select o).ToList();
+
+            var idCuenta = (from x in db.Cuentas where x.IdCliente == idCliente && x.IdMoneda == moneda && x.EstaHabilitada == true && x.FechaBaja == null select x.IdCuenta).FirstOrDefault();
+
+            operaciones = (from o in db.OperacionesDepositoOExtraccions where o.IdCuenta == idCuenta select o).ToList();
             return operaciones;
 
         }
 
-        public int debitoCredito(BilleteraContext db, int idCuenta, int monto, bool esDeposito)
+        public int debitoCredito(BilleteraContext db, int idCLiente, int moneda, int monto, bool esDeposito)
         {
             //Obtiene entidad cuenta
-            Cuenta cuenta = db.Cuentas.FirstOrDefault(x => x.IdCuenta == idCuenta);
+            Cuenta cuenta = db.Cuentas.FirstOrDefault(x => x.IdCliente == idCLiente && x.IdMoneda == moneda && x.EstaHabilitada == true && x.FechaBaja == null);
 
             //Si es deposito suma el dinero, si no controla que se pueda extraer y extrae
             if (esDeposito)
             {
                 cuenta.Saldo += monto;
                 db.SaveChanges();
+
             }else if(cuenta.Saldo - monto < 0)
             {
                 return -1;
@@ -76,7 +80,7 @@ namespace Business
             oOperNueva.Fecha = DateTime.Now;
             oOperNueva.Monto = monto;
             oOperNueva.FechaBaja = null; 
-            oOperNueva.IdCuenta = idCuenta;
+            oOperNueva.IdCuenta = cuenta.IdCuenta;
 
             db.OperacionesDepositoOExtraccions.Add(oOperNueva);
             db.SaveChanges();
