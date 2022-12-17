@@ -1,15 +1,13 @@
 export class Operacion{
     
-    Fecha:any;
     EsDeposito:boolean;
     Monto:number;
-    Cuenta:string;
 
-    constructor(Fecha:any, EsDeposito:boolean, Monto:number, Cuenta:string){
-        this.Fecha=Fecha;
+
+    constructor(EsDeposito:boolean, Monto:number){
         this.EsDeposito=EsDeposito;
         this.Monto=Monto;
-        this.Cuenta=Cuenta;
+
     }
 
 }

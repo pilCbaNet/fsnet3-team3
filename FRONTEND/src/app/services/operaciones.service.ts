@@ -11,6 +11,6 @@ export class OperacionesService {
   constructor(private http:HttpClient) { }
 
   realizarOperacion(operacion:Operacion):Observable<any>{
-  return this.http.post('http://localhost:3000/posts', operacion)
+  return this.http.post('https://localhost:7195/api/Operaciones', operacion)
   }
 }

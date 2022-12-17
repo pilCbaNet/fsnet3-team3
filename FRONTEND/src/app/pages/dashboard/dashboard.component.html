@@ -7,7 +7,7 @@
           <h4>Tu saldo en ARS</h4>
         </div>
         <div class="card-body">
-          <h5><i class="bi bi-currency-dollar"></i>{{ saldos[0].saldo }}</h5>
+          <h5><i class="bi bi-currency-dollar"></i>{{ saldos.valorPesos }}</h5>
           <a  routerLink="/movimientos-ars" class="btn btn-info"
             >Últimos movimientos</a
           >
@@ -23,7 +23,7 @@
           <h4>Tu saldo en BTC</h4>
         </div>
         <div class="card-body">
-          <h5><i class="bi bi-currency-bitcoin"></i>{{ saldos[1].saldo }}</h5>
+          <h5><i class="bi bi-currency-bitcoin"></i>{{ saldos.valorBTC }}</h5>
           <a
           
             routerLink="/movimientos-btc"

@@ -32,10 +32,8 @@ export class RetiroDineroComponent implements OnInit {
   realizarOperacion(){
     if(this.form.valid){
       let Monto:number=this.form.get('amountCash')?.value;
-      let Cuenta:string=this.form.get('selectCuenta')?.value;
-      let Fecha:any=this.fecha;
       let EsDeposito:boolean=false;
-      let operacion:Operacion= new Operacion(Fecha, EsDeposito, Monto, Cuenta);
+      let operacion:Operacion= new Operacion(EsDeposito, Monto);
       this.operacionesService.realizarOperacion(operacion).subscribe(respuestaOk=>{
         alert('Operación realizada con éxito!')
       })

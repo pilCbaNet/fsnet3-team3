@@ -11,12 +11,12 @@ export class MovimientosService {
   
   obtenerUltimosMovimientos():Observable<any>
 {
-  return this.http.get('http://localhost:3000/movimientos')
+  return this.http.get('https://localhost:7195/api/Operaciones')
 }
 
 obtenerSaldo():Observable<any>
 {
-  return this.http.get('http://localhost:3000/saldos')
+  return this.http.get('https://localhost:7195/api/obtenerSaldos')
 }
 
  
