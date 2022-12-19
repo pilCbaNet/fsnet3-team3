@@ -7,10 +7,11 @@ import { Operacion } from '../models/operacion';
   providedIn: 'root'
 })
 export class OperacionesService {
-
+  operacionNumero!:number
   constructor(private http:HttpClient) { }
 
   realizarOperacion(operacion:Operacion):Observable<any>{
+  operacion.IdCuenta = this.operacionNumero;
   return this.http.post('https://localhost:7195/api/Operaciones', operacion)
   }
 }

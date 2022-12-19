@@ -5,6 +5,7 @@ import { Login } from 'src/app/models/login';
 import { UsuarioEnLinea } from 'src/app/models/UsuarioEnLinea';
 import { LoginService } from 'src/app/services/login.service';
 import { MovimientosService } from 'src/app/services/movimientos.service';
+import { OperacionesService } from 'src/app/services/operaciones.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   usuarioEnLinea!:UsuarioEnLinea
 
-  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router, private movimientosService: MovimientosService) {
+  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router, private movimientosService: MovimientosService, private operacionesService: OperacionesService) {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]], //cuando hay mas de un "validators" deben ir dentro de un array
       password: ['', Validators.required]
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
             // alert(`Hola ${data.nombre}, Bienvenido!`);
             this.usuarioEnLinea = data;
             this.movimientosService.userId = this.usuarioEnLinea.idCliente
+            this.operacionesService.operacionNumero = parseInt(this.usuarioEnLinea.idCliente)
             console.log(this.usuarioEnLinea)
             this.router.navigate(['dashboard']);
           }
