@@ -13,12 +13,12 @@ export class MovimientosService {
   
 obtenerUltimosMovimientos():Observable<any>
 {
-  return this.http.post('https://localhost:7195/api/api/obtenerOperaciones', this.userId)
+  return this.http.post('https://localhost:7195/api/api/Operaciones')
 }
 
 obtenerUltimosMovimientosBTC():Observable<any>
 {
-  return this.http.post('https://localhost:7195/api/api/obtenerOperacionesBTC', this.userId)
+  return this.http.post('https://localhost:7195/api/api/Operaciones')
 }
 
 obtenerSaldo():Observable<any>
