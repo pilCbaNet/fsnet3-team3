@@ -13,6 +13,7 @@ export class MovimientosComponent implements OnInit {
   constructor(private cuenta: MovimientosService) { }
 
   ngOnInit(): void {
+
     this.cuenta.obtenerUltimosMovimientos().subscribe(data => {
       console.log(data);
       this.movimientos = data;

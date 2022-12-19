@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Saldos } from 'src/app/models/Saldos';
+import { UsuarioEnLinea } from 'src/app/models/UsuarioEnLinea';
 import { MovimientosService } from 'src/app/services/movimientos.service';
 
 @Component({
@@ -7,13 +9,13 @@ import { MovimientosService } from 'src/app/services/movimientos.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  saldos:any;
+  saldos!:any;
   constructor(private cuenta: MovimientosService) { }
 
   ngOnInit(): void {
     this.cuenta.obtenerSaldo().subscribe(data => {
-      console.log(data);
       this.saldos = data;
+      console.log(this.saldos);
     })
   }
 

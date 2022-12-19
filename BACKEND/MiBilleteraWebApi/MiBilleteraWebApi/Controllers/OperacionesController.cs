@@ -76,19 +76,29 @@ namespace MiBilleteraWebApi.Controllers
 
         }
 
-        [HttpGet("/api/obtenerOperaciones")]
+        [HttpPost("/api/obtenerOperaciones")]
 
-        public List<Operacion> obtenerOperaciones(int idCliente, int moneda)
+        public List<Operacion> obtenerOperaciones(int idCliente)
         {
             using (var db = new BilleteraContext())
             {
-                return new OperacionesBC().listarOperaciones(db, idCliente, moneda);
+                return new OperacionesBC().listarOperaciones(db, idCliente, 1);
+            }
+
+        }
+        [HttpPost("/api/obtenerOperacionesBTC")]
+
+        public List<Operacion> obtenerOperacionesBTC(int idCliente)
+        {
+            using (var db = new BilleteraContext())
+            {
+                return new OperacionesBC().listarOperaciones(db, idCliente, 2);
             }
 
         }
 
         [HttpGet("/api/debitoCredito")]
-        public int debitoCredito(int idCliente, int moneda, int monto, bool esDeposito)
+        public int debitoCredito([FromBody] int idCliente, int moneda, int monto, bool esDeposito)
         {
             using (var db = new BilleteraContext())
             {

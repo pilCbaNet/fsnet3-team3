@@ -84,7 +84,7 @@ namespace Business
             Cliente clienteChequear = (Cliente)db.Clientes.FirstOrDefault(x => x.Usuario == usuario);
             if (clienteChequear != null && DesEncriptar(clienteChequear.Contrasenia) == password)
             {
-                clienteChequear.Contrasenia = DesEncriptar(clienteChequear.Contrasenia);
+                //clienteChequear.Contrasenia = DesEncriptar(clienteChequear.Contrasenia);
                 return clienteChequear;
             }
             return null;

@@ -61,8 +61,8 @@ namespace MiBilleteraWebApi.Controllers
         {
         }
 
-        [HttpGet("/api/obtenerSaldos")]
-        public Saldos GetSaldos(int idCliente)
+        [HttpPost("/api/obtenerSaldos")]
+        public Saldos GetSaldos([FromBody] int idCliente)
         {
             using (var db = new BilleteraContext())
             {
