@@ -11,7 +11,6 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   form!: FormGroup;
-  estaAutenticado = false;
 
   constructor(private formBuilder: FormBuilder, private loginService: LoginService, private router: Router) {
     this.form = this.formBuilder.group({
@@ -39,13 +38,14 @@ export class LoginComponent implements OnInit {
           console.log(data);
           if (data != null) {
             this.form.reset();
-            this.estaAutenticado = true;
+            alert(`Hola ${data.nombre}, Bienvenido!`);
             this.router.navigate(['dashboard']);
           }
           else {
-            this.estaAutenticado = false;
             alert('Ups. Usuario y/o contraseña incorrectos');
           }
+
+
 
         }
       })
@@ -53,6 +53,6 @@ export class LoginComponent implements OnInit {
 
   }
 }
-  
+
 
 

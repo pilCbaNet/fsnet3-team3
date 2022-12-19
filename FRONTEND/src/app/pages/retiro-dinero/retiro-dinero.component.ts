@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Operacion } from 'src/app/models/operacion';
 import { OperacionesService } from 'src/app/services/operaciones.service';
 
@@ -9,35 +10,41 @@ import { OperacionesService } from 'src/app/services/operaciones.service';
   styleUrls: ['./retiro-dinero.component.css']
 })
 export class RetiroDineroComponent implements OnInit {
-  public selectOP:any;
+  public selectOP: any;
   fecha = new Date()
-  form!:FormGroup
-  constructor(private formBuilder:FormBuilder, private operacionesService:OperacionesService) {
+  form!: FormGroup
+  constructor(private formBuilder: FormBuilder, private operacionesService: OperacionesService, private router: Router) {
     this.form = this.formBuilder.group({
-      selectCuenta:['', Validators.required],
-      amountCash:['', Validators.required],
+      selectCuenta: ['', Validators.required],
+      amountCash: ['', Validators.required],
     })
   }
 
-  get selectCuenta(){
-    return this.form.get("selectOp")
+  get selectCuenta() {
+    return this.form.get("selectCuenta")
   }
-  get amountCash(){
+  get amountCash() {
     return this.form.get("amountCash")
   }
 
   ngOnInit(): void {
   }
 
-  realizarOperacion(){
-    if(this.form.valid){
-      let Monto:number=this.form.get('amountCash')?.value;
-      let EsDeposito:boolean=false;
-      let operacion:Operacion= new Operacion(EsDeposito, Monto);
-      this.operacionesService.realizarOperacion(operacion).subscribe(respuestaOk=>{
-        alert('Operación realizada con éxito!')
-      })
+  realizarOperacion() {
+    if (this.form.valid) {
+      let Monto: number = this.form.get('amountCash')?.value;
+      let EsDeposito: boolean = false;
+      let IdCuenta: number = this.form.get('selectCuenta')?.value;
+      let operacion: Operacion = new Operacion(EsDeposito, Monto, IdCuenta);
+      this.operacionesService.realizarOperacion(operacion).subscribe(respuestaOk => {
+        alert('Operación realizada con éxito.');
+      }
+      )
     }
   }
+
+
+
+
 
 }

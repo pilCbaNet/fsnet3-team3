@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovimientosService } from 'src/app/services/movimientos.service';
-import { ActivatedRoute, Params} from '@angular/router';
-import { HttpParams } from '@angular/common/http';
+
 
 
 @Component({
@@ -10,9 +9,8 @@ import { HttpParams } from '@angular/common/http';
   styleUrls: ['./movimientos.component.css']
 })
 export class MovimientosComponent implements OnInit {
-  hoy = new Date();
   movimientos: any;
-  constructor(private cuenta: MovimientosService, private ruta:ActivatedRoute) { }
+  constructor(private cuenta: MovimientosService) { }
 
   ngOnInit(): void {
     this.cuenta.obtenerUltimosMovimientos().subscribe(data => {

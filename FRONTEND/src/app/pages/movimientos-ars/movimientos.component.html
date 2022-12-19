@@ -12,7 +12,7 @@
     <tbody data-link="row" class="rowlink">
       <!-- para que esto muestre datos, primero hay que levantar la API en la terminal con "json-server --watch db.json" -->
 
-      <tr *ngFor="let item of movimientos" role="button" routerLink={{item.detalle}}>
+      <tr *ngFor="let item of movimientos">
         <td> # {{item.idOperacion}}</td>
         <td>{{ item.fecha}}</td>
         <td *ngIf="item.esDeposito == false">Retiro</td>

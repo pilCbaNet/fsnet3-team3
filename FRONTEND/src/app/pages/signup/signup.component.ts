@@ -69,11 +69,12 @@ export class SignupComponent implements OnInit {
       let Contrasenia:string=this.form.get('password')?.value;
       let signup:SignUp = new SignUp(Nombre, Apellido, Cuil, FechaNacimiento, Usuario, Contrasenia)
      this.loginService.signUp(signup).subscribe(respuestaOk=>{
+      alert("Registro exitoso. Hacé click en Aceptar para iniciar sesión.")
+      console.log(this.form.value.name)
       this.router.navigate(['login']);
      })
     }
 
-    alert(`Hola ${this.form.value.name}, Bienvenido!`)
-    console.log(this.form.value.name)
+
   }
 }

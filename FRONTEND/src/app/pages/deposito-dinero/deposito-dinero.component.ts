@@ -18,7 +18,7 @@ export class DepositoDineroComponent implements OnInit {
     })
   }
   get selectCuenta(){
-    return this.form.get("selectOp")
+    return this.form.get("selectCuenta")
   }
   get amountCash(){
     return this.form.get("amountCash")
@@ -29,9 +29,10 @@ export class DepositoDineroComponent implements OnInit {
     if(this.form.valid){
       let Monto:number=this.form.get('amountCash')?.value;
       let EsDeposito:boolean=true;
-      let operacion:Operacion= new Operacion(EsDeposito, Monto);
+      let IdCuenta:number=this.form.get('selectCuenta')?.value;
+      let operacion:Operacion= new Operacion(EsDeposito, Monto, IdCuenta);
       this.operacionesService.realizarOperacion(operacion).subscribe(respuestaOk=>{
-        alert('Operación realizada con éxito!')
+        alert('Operación realizada con éxito.')
       })
     }
   }

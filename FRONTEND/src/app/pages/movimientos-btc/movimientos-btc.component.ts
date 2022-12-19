@@ -7,7 +7,6 @@ import { MovimientosService } from 'src/app/services/movimientos.service';
   styleUrls: ['./movimientos-btc.component.css']
 })
 export class MovimientosBtcComponent implements OnInit {
-  hoy = new Date();
   movimientos: any;
   constructor(private cuenta:MovimientosService) { }
 

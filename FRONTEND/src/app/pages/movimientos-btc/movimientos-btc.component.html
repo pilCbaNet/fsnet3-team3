@@ -1,23 +1,26 @@
-<div class="table-responsive">
-    <h1>Últimos Movimientos</h1>
-    <table class="table table-hover">
-      <thead>
-        <th scope="col">Fecha</th>
-        <th scope="col" style="width: 20%">Operación</th>
-        <th scope="col" style="width: 20%">Monto</th>
-        <th scope="col">Saldo</th>
-        <th scope="col" style="width: 10%">N° de cuenta</th>
-      </thead>
-      <tbody data-link="row" class="rowlink">
-        <!-- para que esto muestre datos, primero hay que levantar la API en la terminal con "json-server --watch db.json" -->
-        <tr *ngFor="let item of movimientos" role="button" routerLink={{item.detalle}}>
-          <td  *ngIf="item.moneda == 'BTC'" >{{ hoy | date: "dd/MM/yy, hh:mm" }}</td>
-          <td  *ngIf="item.moneda == 'BTC'" >{{ item.operacion }}</td>
-          <td [ngStyle]="{'color': (item.operacion) == 'Depósito' ? 'green' : 'red'}"  *ngIf="item.moneda == 'BTC'">{{ item.monto | currency }} {{item.moneda}}</td>
-          <td  *ngIf="item.moneda == 'BTC'" >{{ item.saldo | currency}} {{item.moneda}}</td>
-          <td  *ngIf="item.moneda == 'BTC'" >{{ item.numeroDeCuenta }}</td>
-        </tr>
-      </tbody>
-  <div>
-  
-  <a href="/dashboard" routerLink="/dashboard" class="btn btn-info">Volver</a>
+<table class="table table-hover">
+  <thead>
+    <th scope="col">N° de operación</th>
+    <th scope="col">Fecha</th>
+    <th scope="col" style="width: 20%">Operación</th>
+    <th scope="col" style="width: 20%">Monto</th>
+    <!-- <th scope="col">Saldo</th> -->
+    <th scope="col" style="width: 10%">N° de cuenta</th>
+  </thead>
+  <tbody data-link="row" class="rowlink">
+    <!-- para que esto muestre datos, primero hay que levantar la API en la terminal con "json-server --watch db.json" -->
+
+    <tr *ngFor="let item of movimientos">
+      <td> # {{item.idOperacion}}</td>
+      <td>{{ item.fecha}}</td>
+      <td *ngIf="item.esDeposito == false">Retiro</td>
+      <td *ngIf="item.esDeposito == true">Depósito</td>
+      <td [ngStyle]="{'color': (item.esDeposito) == true ? 'green' : 'red'}">{{ item.monto | currency }}</td>
+     <!-- <td>{{ item.saldo | currency}} {{item.moneda}}</td> -->
+      <td>{{ item.idCuenta }}</td>
+    </tr>
+  </tbody>
+<div>
+
+<a href="/dashboard" routerLink="/dashboard" class="btn btn-info">Volver</a>
+
