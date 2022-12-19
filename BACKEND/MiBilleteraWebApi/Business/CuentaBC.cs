@@ -45,6 +45,8 @@ namespace Business
 
         }
 
+        //Obtiene los saldos, el cliente tiene como maximo 2 cuentas activas, una en $ y la otra en btc
+        //La funcion controla que la cuenta este activa y habilitada y crea el objeto con los saldos correspondientes
         public Saldos obtenerSaldos(BilleteraContext db, int id)
         {
 
@@ -59,11 +61,11 @@ namespace Business
                 {
                     if (saldo.IdMoneda == 1)
                     {
-                        saldoPesos += saldo.Saldo;
+                        saldoPesos = saldo.Saldo;
                     }
                     else
                     {
-                        saldoBtc += saldo.Saldo;
+                        saldoBtc = saldo.Saldo;
                     }
                 }
             }

@@ -78,21 +78,21 @@ namespace MiBilleteraWebApi.Controllers
 
         [HttpGet("/api/obtenerOperaciones")]
 
-        public List<Operacion> obtenerOperaciones(int id)
+        public List<Operacion> obtenerOperaciones(int idCliente, int moneda)
         {
             using (var db = new BilleteraContext())
             {
-                return new OperacionesBC().listarOperaciones(db, id);
+                return new OperacionesBC().listarOperaciones(db, idCliente, moneda);
             }
 
         }
 
         [HttpGet("/api/debitoCredito")]
-        public int debitoCredito(int id, int monto, bool esDeposito)
+        public int debitoCredito(int idCliente, int moneda, int monto, bool esDeposito)
         {
             using (var db = new BilleteraContext())
             {
-                return new OperacionesBC().debitoCredito(db, id, monto, esDeposito);
+                return new OperacionesBC().debitoCredito(db, idCliente, moneda, monto, esDeposito);
             }
 
         }
